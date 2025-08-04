@@ -10,21 +10,29 @@
   top: 10px;
   left: 50%;
   transform: translateX(-50%);
-  background: linear-gradient(135deg, #6b7280, #4b5563);
-  color: white;
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 500;
+  background: linear-gradient(135deg, #1a1f2e, #2d3748);
+  color: #49ced8;
+  padding: 14px 42px;
+  font-size: 15px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  cursor: default;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: all 0.35s ease;
+  border: none;
+
+  /* Futuristic hexagon shape */
+  clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+  
+  box-shadow: 0 0 15px rgba(0, 247, 255, 0.3), 0 0 5px rgba(0, 247, 255, 0.2);
+  font-family: 'Orbitron', sans-serif; /* futuristic font */
 }
 
 .popup-trigger:hover {
-  background: linear-gradient(135deg, #9ca3af, #6b7280);
+  background: linear-gradient(135deg, #2d3748, #3b82f6);
+  color: #ffffff;
+  transform: translateX(-50%) scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 247, 255, 0.6), 0 0 10px rgba(0, 247, 255, 0.4);
 }
 
 .navbar {
@@ -65,7 +73,7 @@
   height: 2px;
   bottom: -5px;
   left: 0;
-  background: #10b981;
+  background: #a2da5e;
   transition: width 0.3s ease;
 }
 
@@ -76,9 +84,10 @@
 
 .nav-link:hover,
 .nav-link.active {
-  color: #10b981;
+  color: #43f0ed;
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .navbar-content {
     gap: 20px;
@@ -89,7 +98,15 @@
   }
 
   .popup-trigger {
-    font-size: 12px;
-    padding: 6px 12px;
+    font-size: 13px;
+    padding: 10px 28px;
+    clip-path: polygon(12% 0%, 88% 0%, 98% 100%, 2% 100%);
+    box-shadow: 0 2px 10px rgba(59, 130, 246, 0.2);
+  }
+
+  .popup-trigger:hover {
+    transform: translateX(-50%) perspective(500px) scale(1.04) rotateX(-6deg);
+    clip-path: polygon(15% 0%, 85% 0%, 95% 100%, 5% 100%);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.35);
   }
 }
