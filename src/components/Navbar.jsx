@@ -19,7 +19,7 @@ const Navbar = () => {
         className="popup-trigger"
         onMouseEnter={() => setIsNavVisible(true)}
       >
-        Hover to Navigate
+       Aspryde
       </div>
       <nav
         className={`navbar ${isNavVisible ? 'visible' : ''}`}
