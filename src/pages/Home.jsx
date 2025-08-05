@@ -28,7 +28,7 @@ const Home = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.3, duration: 1 }}
           >
-            Aspire Boldly.<br />Rise Proudly.
+            Aspire Boldly,<br />Rise Proudly.
           </motion.h1>
 
           <motion.p

@@ -46,7 +46,7 @@ const About = () => {
                   <p className="role">Chief Executive Officer</p>
                 </div>
                 <div className="team-card-back">
-                  <p>Tech visionary leading Aspryde's growth and strategy with 12+ years in software innovation.</p>
+                  <p><p>Tech visionary leading Aspryde's growth and strategy with a strong foundation in software innovation.</p></p>
                   <div className="social-links">
                     <a href="https://www.linkedin.com/in/shardul-mane-4a26a2256/" target="_blank" rel="noopener norepreferrer" aria-label="LinkedIn Shardul Mane"><FaLinkedin /></a>
                     <a href="https://github.com/ShardulMane20" target="_blank" rel="noopener norepreferrer" aria-label="GitHub Shardul Mane"><FaGithub /></a>
@@ -180,7 +180,7 @@ const About = () => {
             <div className="contact-card">
               <FiMail className="contact-icon" />
               <h4>Email Us</h4>
-              <a href="mailto:contact@aspryde.tech">contact@aspryde.tech</a>
+              <a href="mailto:contact@aspryde.tech">aspryde,official@gmail.com</a>
             </div>
             <div className="contact-card">
               <FiPhone className="contact-icon" />
@@ -190,7 +190,7 @@ const About = () => {
             <div className="contact-card">
               <FiMapPin className="contact-icon" />
               <h4>Visit Us</h4>
-              <p>Dighanchi, Sangli, Maharashtra, India</p>
+              <p>Pune, Maharashtra, India</p>
             </div>
           </div>
         </section>
