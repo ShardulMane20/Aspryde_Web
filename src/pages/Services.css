@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  font-family: 'Orbitron', 'Exo', sans-serif;
+  font-family: 'Roboto', 'Exo', sans-serif;
   overflow-x: hidden;
   background: var(--space-dark);
   color: white;

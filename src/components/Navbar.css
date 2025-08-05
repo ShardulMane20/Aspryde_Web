@@ -25,7 +25,7 @@
   clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
   
   box-shadow: 0 0 15px rgba(0, 247, 255, 0.3), 0 0 5px rgba(0, 247, 255, 0.2);
-  font-family: 'Orbitron', sans-serif; /* futuristic font */
+  font-family: 'Poppins', sans-serif; /* futuristic font */
 }
 
 .popup-trigger:hover {
