@@ -1,11 +1,10 @@
-/* Update these styles in your Footer.css */
-
 .galaxy-footer {
   position: relative;
   width: 100%;
-  padding: 3rem 2rem;
+  padding: 1.5rem 2rem;
   overflow: hidden;
-  min-height: 400px; /* Fixed height */
+  min-height: 250px; /* Reduced height for compactness */
+  background: linear-gradient(180deg, #0A0E17 0%, #1C2526 100%);
 }
 
 .galaxy-static {
@@ -31,53 +30,47 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-items: center; /* Changed to center for vertical alignment */
   z-index: 2;
+  gap: 2rem;
 }
 
 .logo-container {
   text-align: center;
-  margin-bottom: 2rem;
+  flex: 0 0 150px; /* Fixed width for logo section */
+  display: flex;
+  align-items: center; /* Ensure logo is centered within its container */
+  height: 100%; /* Match the height of footer-sections */
 }
 
 .company-logo {
-  width: 120px;
-  height: 120px;
+  width: 100px; /* Reduced logo size */
+  height: 100px;
   object-fit: contain;
-  margin-bottom: 1rem;
-  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.5));
-}
-
-.company-tagline {
-  color: white;
-  font-size: 1.2rem;
-  margin-top: 1rem;
-  text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+  filter: drop-shadow(0 0 8px rgba(108, 99, 255, 0.5));
 }
 
 .footer-sections {
   display: flex;
-  justify-content: space-around;
-  width: 100%;
-  flex-wrap: wrap;
-  gap: 2rem;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1rem; /* Reduced gap */
 }
 
 .footer-section {
   flex: 1;
-  min-width: 200px;
-  padding: 1rem;
+  min-width: 150px; /* Reduced min-width */
+  padding: 0.8rem; /* Reduced padding */
   background: rgba(10, 14, 23, 0.7);
-  border-radius: 10px;
+  border-radius: 8px;
   backdrop-filter: blur(5px);
   border: 1px solid rgba(108, 99, 255, 0.3);
 }
 
 .footer-section h4 {
   color: #6C63FF;
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+  margin-bottom: 0.5rem; /* Reduced margin */
+  font-size: 1rem;
 }
 
 .footer-section ul {
@@ -85,22 +78,48 @@
   padding: 0;
 }
 
-.footer-section li {
-  margin: 0.5rem 0;
-  padding: 0.3rem 0;
+.footer-section li, .footer-section p {
+  margin: 0.3rem 0; /* Reduced margin */
+  padding: 0.2rem 0; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font size */
   border-bottom: 1px dashed rgba(108, 99, 255, 0.2);
 }
 
-.footer-section p {
-  margin: 0.5rem 0;
-  padding: 0.3rem 0;
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  transform: rotate(45deg);
+  animation: shoot 3s infinite;
+}
+
+@keyframes shoot {
+  0% {
+    opacity: 1;
+    transform: translateX(0) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px) rotate(45deg);
+  }
 }
 
 .copyright-container {
-  margin-top: 2rem;
+  margin-top: 1rem; /* Reduced margin */
   text-align: center;
   width: 100%;
 }
 
-/* Keep your existing dark/light mode classes */
-/* Keep your existing shooting star animation */
+.copyright {
+  font-size: 0.85rem; /* Smaller font size */
+  color: white;
+}
+
+.dark-matter {
+  background: linear-gradient(180deg, #0A0E17 0%, #1C2526 100%);
+}
+
+.light-energy {
+  background: linear-gradient(180deg, #1C2526 0%, #3B4A6B 100%);
+}
