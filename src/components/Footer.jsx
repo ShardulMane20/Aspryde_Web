@@ -47,10 +47,25 @@ const Footer = ({ darkMode }) => {
 
           <div className="footer-section">
             <h4>Connect With Us</h4>
-            <p>✉️ aspryde.official@gmail.com</p>
-            <p>🔗 linkedin.com/company/aspryde</p>
-            <p>📱 +1 (123) 456-7890</p>
+            
+            {/* Email */}
+            <p>
+              ✉️ <a href="mailto:aspryde.official@gmail.com">aspryde.official@gmail.com</a>
+            </p>
+            
+            {/* LinkedIn */}
+            <p>
+              🔗 <a href="https://www.linkedin.com/company/aspryde" target="_blank" rel="noopener noreferrer">
+                linkedin.com/company/aspryde
+              </a>
+            </p>
+            
+            {/* Phone */}
+            <p>
+              📱 <a href="tel:+919307708830">+91 93077 08830</a>
+            </p>
           </div>
+
 
           <div className="footer-section">
             <h4>Our Expertise</h4>

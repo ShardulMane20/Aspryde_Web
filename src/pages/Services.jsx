@@ -8,6 +8,8 @@ import { OrbitControls, Stars, Sphere } from '@react-three/drei';
 import './Services.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ParticleBackground from '../components/ParticleBackground';
+import logo from '../assets/logo.png'; // adjust path as needed
+
 
 
 // Cosmic Service Data
@@ -59,7 +61,34 @@ const services = [
     color: '#FFA500',
     backContent: "We empower teams with knowledge and strategic guidance for tech success.",
     tech: ['Strategy', 'Training', 'Mentorship']
-  }
+  },
+
+  {
+  title: 'UI/UX Design',
+  icon: '🎨',
+  points: [
+    'Wireframes and interactive prototypes',
+    'User-centric design workflows',
+    'Design systems using Figma & Adobe XD',
+  ],
+  color: '#FF69B4',
+  backContent: "We design intuitive digital experiences that are both functional and visually stunning.",
+  tech: ['Figma', 'Adobe XD', 'Material UI']
+},
+
+{
+  title: 'Automation & Scripting',
+  icon: '🤖',
+  points: [
+    'Python automation for routine tasks',
+    'Data scraping & API integrations',
+    'Shell scripting and process optimization',
+  ],
+  color: '#00CED1',
+  backContent: "Boost productivity with powerful scripts and automated workflows tailored to your needs.",
+  tech: ['Python', 'Bash', 'APIs']
+}
+
 ];
 
 // 3D Earth Componen
@@ -185,16 +214,8 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
               <motion.span
                 key={i}
                 className="tech-orb"
-                animate={{
-                  y: [0, Math.sin(i * 2) * 15],
-                  opacity: [0.6, 1, 0.6],
-                  backgroundColor: [color, lightenColor(color, 20), color]
-                }}
-                transition={{
-                  duration: 3 + i,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                
+                
               >
                 {t}
               </motion.span>
@@ -339,24 +360,7 @@ const ServicesPage = () => {
           ))}
         </div>
 
-        {/* Wormhole Divider */}
-        <div className="wormhole-divider">
-          <div className="wormhole" />
-          <motion.div 
-            className="astronaut"
-            animate={{
-              y: [0, -20, 0],
-              rotate: [0, 5, -5, 0]
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-          >
-            👨‍🚀
-          </motion.div>
-        </div>
+
 
         {/* About Section */}
         <motion.section 
@@ -366,12 +370,14 @@ const ServicesPage = () => {
           viewport={{ margin: "-100px" }}
           transition={{ duration: 0.8 }}
         >
-          <h2>Who We Are</h2>
+          <h2>How We Work</h2>
           <p>
-            We are a team of <span className="text-highlight">cosmic engineers</span> dedicated to 
-            turning <span className="text-highlight">ideas</span> into <span className="text-highlight">digital reality</span>.
-            Our mission is to push the boundaries of technology while maintaining stellar quality.
-          </p>
+            Our process is driven by <span className="text-highlight">clarity, collaboration</span>, and 
+            <span className="text-highlight"> cutting-edge technology</span>. Whether it's building scalable 
+            web platforms or intuitive mobile apps, we begin by understanding your goals, crafting tailored 
+            strategies, and delivering high-performance solutions that make an impact.
+         </p>
+
           
           <motion.div 
             className="satellite"
@@ -388,6 +394,38 @@ const ServicesPage = () => {
             🛰️
           </motion.div>
         </motion.section>
+
+
+        {/* Quantum Divider with Logo */}
+            <div className="quantum-divider">
+              <div className="energy-orb" />
+
+              <motion.img
+              src={logo}
+              alt="Aspryde Logo"
+              className="tech-icon"
+              animate={{
+                x: ["-10%", "10%", "-8%", "8%", "0%"],
+                y: ["-10%", "10%", "-6%", "6%", "0%"],
+                rotate: [0, 10, -10, 5, 0],
+              }}
+              transition={{
+                duration: 10,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            />
+
+
+              <div className="rotating-particles">
+                <div className="particle" />
+                <div className="particle" />
+                <div className="particle" />
+              </div>
+            </div>
+
+
+        
       </div>
     </div>
   );

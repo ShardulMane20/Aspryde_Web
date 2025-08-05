@@ -68,7 +68,7 @@
 }
 
 .footer-section h4 {
-  color: #6C63FF;
+  color: #41bcc7;
   margin-bottom: 0.5rem; /* Reduced margin */
   font-size: 1rem;
 }
@@ -122,4 +122,17 @@
 
 .light-energy {
   background: linear-gradient(180deg, #1C2526 0%, #3B4A6B 100%);
+}
+
+
+.footer-section a {
+  color: #2eb2bb;           /* Light cyan (matches your brand) */
+  text-decoration: none;   /* Remove underline */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #49ced8;           /* Brighter on hover */
+  text-decoration: underline; /* Optional */
 }
