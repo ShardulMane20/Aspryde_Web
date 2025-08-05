@@ -148,58 +148,94 @@ const About = () => {
         </div>
       </section>
         <section className="about-section">
-          <div className="section-header">
-            <h2>Our Tech Stack</h2>
-            <div className="section-divider"></div>
+  <div className="section-header">
+    <h2>Our Tech Stack</h2>
+    <div className="section-divider"></div>
+  </div>
+
+        <div className="stack-container">
+          <div className="stack-category">
+            <h4>Frontend</h4>
+            <ul>
+              <li>React</li>
+              <li>Next.js</li>
+              <li>Vite</li>
+              <li>Tailwind CSS</li>
+            </ul>
           </div>
-          <div className="stack-container">
-            <div className="stack-category">
-              <h4>Frontend</h4>
-              <ul>
-                <li>React</li>
-                <li>Next.js</li>
-                <li>Vite</li>
-                <li>Tailwind CSS</li>
-              </ul>
-            </div>
-            <div className="stack-category">
-              <h4>Mobile</h4>
-              <ul>
-                <li>Kotlin</li>
-                <li>Flutter</li>
-                <li>Firebase</li>
-                <li>Swift</li>
-              </ul>
-            </div>
-            <div className="stack-category">
-              <h4>Backend</h4>
-              <ul>
-                <li>Python</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>GraphQL</li>
-              </ul>
-            </div>
-            <div className="stack-category">
-              <h4>AI/ML</h4>
-              <ul>
-                <li>TensorFlow</li>
-                <li>PyTorch</li>
-                <li>OpenCV</li>
-                <li>HuggingFace</li>
-              </ul>
-            </div>
-            <div className="stack-category">
-              <h4>DevOps</h4>
-              <ul>
-                <li>Docker</li>
-                <li>AWS</li>
-                <li>GitHub Actions</li>
-                <li>Kubernetes</li>
-              </ul>
-            </div>
+
+          <div className="stack-category">
+            <h4>Mobile</h4>
+            <ul>
+              <li>Kotlin</li>
+              <li>Flutter</li>
+              <li>Firebase</li>
+              <li>Swift</li>
+            </ul>
           </div>
-        </section>
+
+          <div className="stack-category">
+            <h4>Backend</h4>
+            <ul>
+              <li>Python</li>
+              <li>Node.js</li>
+              <li>Express</li>
+              <li>GraphQL</li>
+            </ul>
+          </div>
+
+          <div className="stack-category">
+            <h4>AI/ML</h4>
+            <ul>
+              <li>TensorFlow</li>
+              <li>PyTorch</li>
+              <li>OpenCV</li>
+              <li>HuggingFace</li>
+            </ul>
+          </div>
+
+          <div className="stack-category">
+            <h4>DevOps</h4>
+            <ul>
+              <li>Docker</li>
+              <li>AWS</li>
+              <li>GitHub Actions</li>
+              <li>Kubernetes</li>
+            </ul>
+          </div>
+
+          <div className="stack-category">
+            <h4>Database</h4>
+            <ul>
+              <li>MongoDB</li>
+              <li>MySQL</li>
+              <li>PostgreSQL</li>
+              <li>Redis</li>
+            </ul>
+          </div>
+
+          <div className="stack-category">
+            <h4>Testing</h4>
+            <ul>
+              <li>Jest</li>
+              <li>Mocha</li>
+              <li>Cypress</li>
+              <li>Postman</li>
+            </ul>
+          </div>
+
+          <div className="stack-category">
+            <h4>Design Tools</h4>
+            <ul>
+              <li>Figma</li>
+              <li>Adobe XD</li>
+              <li>Photoshop</li>
+              <li>Illustrator</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
 
         <section className="about-section vision-section">
           <div className="section-header">
