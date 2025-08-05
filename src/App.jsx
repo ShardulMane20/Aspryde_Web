@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import ServicesPage from "./pages/Services";
 import Footer from "./components/Footer";
@@ -22,6 +23,7 @@ const App = () => {
           <Route path="/about" element={<About darkMode={darkMode} />} />
           <Route path="/portfolio" element={<Portfolio darkMode={darkMode} />} />
           <Route path="/services" element={<ServicesPage darkMode={darkMode} />} />
+          <Route path="/contact" element={<Contact darkMode={darkMode} />} />
         </Routes>
 
         <Footer darkMode={darkMode} />
