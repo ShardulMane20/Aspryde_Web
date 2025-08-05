@@ -3,6 +3,9 @@ import "./About.css";
 import logo from "../assets/logo.png";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
+import shardulMane from "../assets/Shardul.jpeg"; // Add your image
+import narayanSangale from "../assets/narayan.jpg"; // Add your image
+import yashKadav from "../assets/yashk.jpg"; // Add your image
 
 const About = () => {
   return (
@@ -32,72 +35,118 @@ const About = () => {
           </p>
         </section>
 
-        <section className="about-section">
-          <div className="section-header">
-            <h2>Leadership Team</h2>
-            <div className="section-divider"></div>
-          </div>
-          <div className="team-grid">
-            <div className="team-card">
-              <div className="team-card-inner">
-                <div className="team-card-front">
-                  <div className="team-avatar avatar-ceo"></div>
-                  <h3>Shardul Mane</h3>
-                  <p className="role">Chief Executive Officer</p>
-                </div>
-                <div className="team-card-back">
-                  <p><p>Tech visionary leading Aspryde's growth and strategy with a strong foundation in software innovation.</p></p>
-                  <div className="social-links">
-                    <a href="https://www.linkedin.com/in/shardul-mane-4a26a2256/" target="_blank" rel="noopener norepreferrer" aria-label="LinkedIn Shardul Mane"><FaLinkedin /></a>
-                    <a href="https://github.com/ShardulMane20" target="_blank" rel="noopener norepreferrer" aria-label="GitHub Shardul Mane"><FaGithub /></a>
-                  </div>
-                </div>
+       <section className="about-section">
+        <div className="section-header">
+          <h2>Leadership Team</h2>
+          <div className="section-divider"></div>
+        </div>
+        <div className="team-grid">
+          <div className="team-card">
+            <div className="team-card-inner">
+              <div className="team-card-front">
+                <img
+                  src={shardulMane}
+                  alt="Shardul Mane, CEO"
+                  className="team-avatar"
+                />
+                <h3>Shardul Mane</h3>
+                <p className="role">Chief Executive Officer</p>
               </div>
-            </div>
-            
-            <div className="team-card">
-              <div className="team-card-inner">
-                <div className="team-card-front">
-                  <div className="team-avatar avatar-coo"></div>
-                  <h3>Narayan Sangale</h3>
-                  <p className="role">Chief Operating Officer</p>
-                </div>
-                <div className="team-card-back">
-                  <p>Driving operational excellence across products and delivery with a focus on client success.</p>
-                  <div className="social-links">
-                    <a href="https://www.linkedin.com/in/narayan-sangale/"
-                     target="_blank" rel="noopener norepreferrer"
-                     aria-label="LinkedIn Narayan Sangale"><FaLinkedin /></a>
-                    <a href="https://github.com/Code7Narayan" 
-                    target="_blank" rel="noopener norepreferrer"
-                    aria-label="GitHub Code7Narayan"><FaGithub /></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="team-card">
-              <div className="team-card-inner">
-                <div className="team-card-front">
-                  <div className="team-avatar avatar-cto"></div>
-                  <h3>Yash Kadav</h3>
-                  <p className="role">Chief Technology Officer</p>
-                </div>
-                <div className="team-card-back">
-                  <p>Architect of scalable systems and AI innovation with expertise in cloud-native solutions.</p>
-                  <div className="social-links">
-                    <a href="https://www.linkedin.com/in/yashkadav/" 
-                    target="_blank" rel="noopener norepreferrer"
-                    aria-label="LinkedIn Yash Kadav"><FaLinkedin /></a>
-                    <a href="https://github.com/Code7Narayan" target="_blank"
-                     rel="noopener norepreferrer" aria-label="GitHub yashajaykadav"><FaGithub /></a>
-                  </div>
+              <div className="team-card-back">
+                <p>Tech visionary leading Aspryde's growth and strategy with a strong foundation in software innovation.</p>
+                <div className="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/shardul-mane-4a26a2256/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Shardul Mane"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://github.com/ShardulMane20"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Shardul Mane"
+                  >
+                    <FaGithub />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-        </section>
 
+          <div className="team-card">
+            <div className="team-card-inner">
+              <div className="team-card-front">
+                <img
+                  src={narayanSangale}
+                  alt="Narayan Sangale, COO"
+                  className="team-avatar"
+                />
+                <h3>Narayan Sangale</h3>
+                <p className="role">Chief Operating Officer</p>
+              </div>
+              <div className="team-card-back">
+                <p>Driving operational excellence across products and delivery with a focus on client success.</p>
+                <div className="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/narayan-sangale/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Narayan Sangale"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://github.com/Code7Narayan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Code7Narayan"
+                  >
+                    <FaGithub />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="team-card">
+            <div className="team-card-inner">
+              <div className="team-card-front">
+                <img
+                  src={yashKadav}
+                  alt="Yash Kadav, CTO"
+                  className="team-avatar"
+                />
+                <h3>Yash Kadav</h3>
+                <p className="role">Chief Technology Officer</p>
+              </div>
+              <div className="team-card-back">
+                <p>Architect of scalable systems and AI innovation with expertise in cloud-native solutions.</p>
+                <div className="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/yashkadav/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Yash Kadav"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://github.com/Code7Narayan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub yashajaykadav"
+                  >
+                    <FaGithub />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
         <section className="about-section">
           <div className="section-header">
             <h2>Our Tech Stack</h2>
