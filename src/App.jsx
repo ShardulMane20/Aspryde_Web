@@ -1,28 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// Only available components
+// Components
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
-// import Footer from "./components/Footer"; ❌ Not created yet
+import ServicesPage from "./pages/Services";
+import Footer from "./components/Footer";
 
 const App = () => {
+  const [darkMode, setDarkMode] = useState(false);
+
   return (
     <Router>
-      <div className="app-wrapper">
-        <Navbar />
-
+      <div className={`app-wrapper ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+        <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+        
         <Routes>
-          {/* Only load created pages */}
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/portfolio" element={<Portfolio />} />
-
+          <Route path="/" element={<Home darkMode={darkMode} />} />
+          <Route path="/about" element={<About darkMode={darkMode} />} />
+          <Route path="/portfolio" element={<Portfolio darkMode={darkMode} />} />
+          <Route path="/services" element={<ServicesPage darkMode={darkMode} />} />
         </Routes>
 
-        {/* <Footer /> */}
+        <Footer darkMode={darkMode} />
       </div>
     </Router>
   );

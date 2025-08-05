@@ -1,0 +1,106 @@
+/* Update these styles in your Footer.css */
+
+.galaxy-footer {
+  position: relative;
+  width: 100%;
+  padding: 3rem 2rem;
+  overflow: hidden;
+  min-height: 400px; /* Fixed height */
+}
+
+.galaxy-static {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.galaxy-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white;
+}
+
+.footer-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.company-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 10px rgba(108, 99, 255, 0.5));
+}
+
+.company-tagline {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  text-shadow: 0 0 10px rgba(108, 99, 255, 0.5);
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  padding: 1rem;
+  background: rgba(10, 14, 23, 0.7);
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+}
+
+.footer-section h4 {
+  color: #6C63FF;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li {
+  margin: 0.5rem 0;
+  padding: 0.3rem 0;
+  border-bottom: 1px dashed rgba(108, 99, 255, 0.2);
+}
+
+.footer-section p {
+  margin: 0.5rem 0;
+  padding: 0.3rem 0;
+}
+
+.copyright-container {
+  margin-top: 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+/* Keep your existing dark/light mode classes */
+/* Keep your existing shooting star animation */
