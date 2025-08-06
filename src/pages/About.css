@@ -320,6 +320,7 @@
 }
 
 /* Contact Section */
+/* Contact Section */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -328,10 +329,19 @@
 
 .contact-card {
   background: #2a3b4f;
-  padding: 1.5rem;
+  padding: 2rem 1.5rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease;
+
+  /* Flex layout to control spacing */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 240px; /* or adjust based on your design */
+  position: relative;
 }
 
 .contact-card:hover {
@@ -340,14 +350,17 @@
 }
 
 .contact-icon {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #00ff88;
-  margin-bottom: 1rem;
+  margin-bottom: auto;
+  position: absolute;
+  top: 20px;
 }
 
 .contact-card h4 {
   font-size: 1.3rem;
   color: #e6edf3;
+  margin-top: 60px; /* push below the icon */
   margin-bottom: 0.5rem;
 }
 

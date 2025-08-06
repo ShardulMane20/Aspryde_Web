@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, useScroll, useTransform, useInView } from 'framer-motion';
 import { FiArrowRight, FiGrid, FiZap, FiCode, FiAward } from 'react-icons/fi';
-import { useNavigate } from 'react-router-dom'; // ✅ ADDED
+import { useNavigate } from 'react-router-dom';
 import './Portfolio.css';
 import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
@@ -16,7 +16,7 @@ const Portfolio = () => {
   const headingRef = useRef(null);
   const inView = useInView(headingRef, { once: true, amount: 0.3 });
 
-  const navigate = useNavigate(); // ✅ ADDED
+  const navigate = useNavigate();
 
   const { scrollYProgress } = useScroll();
   const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
@@ -182,6 +182,7 @@ const Portfolio = () => {
               </div>
             </div>
           </motion.div>
+          <div className="header-decoration"></div>
         </div>
         <div className="portfolio-content">
           <motion.div 
@@ -221,7 +222,7 @@ const Portfolio = () => {
                 className="cta-button"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => navigate('/contact')} // ✅ ADDED
+                onClick={() => navigate('/contact')}
               >
                 <span>Get Started</span>
                 <FiArrowRight className="cta-icon" />
