@@ -86,15 +86,16 @@
   background: rgba(191, 99, 241, 0.2);
   border: 1px solid rgba(99, 102, 241, 0.3);
   border-radius: 15px;
-  color: var(--primary-light);
+  color: #000000; /* Black in hexadecimal */
   padding: 0.25rem 0.75rem;
   font-size: 0.8rem;
   font-weight: 500;
   transition: var(--transition);
 }
 
+
 .tech-badge:hover {
-  background: rgba(99, 102, 241, 0.4);
+  background: rgba(120, 122, 244, 0.862);
   transform: translateY(-2px);
 }
 
