@@ -34,7 +34,7 @@ const services = [
       'Robust Backend Development with Node.js, Python, and PHP',
       'Full-stack Development using MERN',
     ],
-    color: '#FF6584',
+    color: '#c300d1ff',
     backContent: "We craft fast, responsive websites that drive engagement and conversions.",
     tech: ['React', 'Node.js', 'MongoDB']
   },
@@ -71,7 +71,7 @@ const services = [
     'User-centric design workflows',
     'Design systems using Figma & Adobe XD',
   ],
-  color: '#FF69B4',
+  color: '#06c906ff',
   backContent: "We design intuitive digital experiences that are both functional and visually stunning.",
   tech: ['Figma', 'Adobe XD', 'Material UI']
 },
@@ -84,7 +84,7 @@ const services = [
     'Data scraping & API integrations',
     'Shell scripting and process optimization',
   ],
-  color: '#00CED1',
+  color: '#FF6584',
   backContent: "Boost productivity with powerful scripts and automated workflows tailored to your needs.",
   tech: ['Python', 'Bash', 'APIs']
 }
@@ -297,25 +297,9 @@ const ServicesPage = () => {
       <div className="comet" style={{ top: '40%', left: '-200px' }} />
       <div className="comet" style={{ top: '70%', left: '-150px' }} />
 
-      {/* Audio Toggle */}
-      <motion.button 
-        className="audio-toggle"
-        onClick={() => setAudioEnabled(!audioEnabled)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        {audioEnabled ? '🔊 Sound On' : '🔇 Sound Off'}
-      </motion.button>
+     
 
-      {/* Dark Mode Toggle (Quantum Switch) */}
-      <motion.button 
-        className="quantum-toggle"
-        onClick={() => setDarkMode(!darkMode)}
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        {darkMode ? '🌌 Light Mode' : '☀️ Dark Mode'}
-      </motion.button>
+    
 
       {/* Animated Cosmic Logo */}
       <motion.div 
