@@ -6,6 +6,7 @@ import { FiMail, FiPhone, FiMapPin } from "react-icons/fi";
 import shardulMane from "../assets/Shardul.jpeg"; // Add your image
 import narayanSangale from "../assets/narayan.jpg"; // Add your image
 import yashKadav from "../assets/yashk.jpg"; // Add your image
+import Swapnil from "../assets/Swapnil.jpg"; // Add your image
 
 const About = () => {
   return (
@@ -130,6 +131,40 @@ const About = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn Yash Kadav"
+                  >
+                    <FaLinkedin />
+                  </a>
+                  <a
+                    href="https://github.com/Code7Narayan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub yashajaykadav"
+                  >
+                    <FaGithub />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="team-card">
+            <div className="team-card-inner">
+              <div className="team-card-front">
+                <img
+                  src={Swapnil}
+                  alt="Yash Kadav, CTO"
+                  className="team-avatar"
+                />
+                <h3>Swapnil Pawar</h3>
+                <p className="role">Chief Marketing Officer</p>
+              </div>
+              <div className="team-card-back">
+                <p>Drives digital transformation through innovative marketing strategies and brand development. Specializes in scaling tech brands globally.</p>
+                <div className="social-links">
+                  <a
+                    href="https://www.linkedin.com/in/yashkadav/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Swapnil Pawar"
                   >
                     <FaLinkedin />
                   </a>
