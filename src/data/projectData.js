@@ -1,18 +1,21 @@
 // src/data/projectData.js
-import aerobotz from '../assets/aerobotz1.png';
-import FoodApp1 from '../assets/FoodApp1.png';
 import aerobotz from '../assets/aerobotz1.jpg';
+import FoodApp1 from '../assets/FoodApp1.png';
 import logo from '../assets/logo.png';
 import aerobotz2 from '../assets/aerobotz2.png';
 import aerobotz3 from '../assets/aerobotz3.png';
 import aerobotz4 from '../assets/aerobotz4.png';
 import aerobotz5 from '../assets/aerobotz5.png';
-import { a } from 'framer-motion/client';
+import zanvar1 from '../assets/zanvar1.jpg';
+import zanvar2 from '../assets/zanvar2.jpg';
+// import zanvar3 from '../assets/zanvar3.png';
+// import zanvar4 from '../assets/zanvar4.png';  
+// import { a } from 'framer-motion/client';
 
 const projectData = [
   {
     id: 1,
-    title: "Ground Control Station for Aerobotz Pvt. Ltd.",
+    title: "Ground Control Station for Aerobotz",
     image: aerobotz, // Main display image for project cards
     images: [
       {
@@ -38,7 +41,7 @@ const projectData = [
     ],
     summary: "Developed a tailored Ground Control Station for seamless AeroBotz drone operations.",
     description: "Built a dedicated Ground Control Station tailored for AeroBotz UAVs to support real-time telemetry monitoring, mission planning, and autonomous flight control. The system enables seamless UAV operations with live map tracking, waypoint-based navigation, and in-flight command execution. Designed with an intuitive interface to streamline mission workflows and improve drone deployment efficiency.",
-    techStack: ["C++", "Qt", "MAVLink", "Networking (UDP/TCP)", "Git"],
+    techStack: ["C++", "Qt", "MAVLink", "Networking"],
     features: [
       "Live telemetry monitoring",
       "Waypoint-based mission planning",
@@ -92,11 +95,11 @@ const projectData = [
   },
   {
     id: 3,
-    title: "QuickQuiz Android App",
-    image: logo,
+    title: "Software for Zanvar Group of Industries",
+    image: zanvar1,
     images: [
       {
-        src: logo,
+        src: zanvar2,
         caption: "Quiz Interface",
         type: "mobile"
       },
@@ -116,15 +119,15 @@ const projectData = [
         type: "interface"
       }
     ],
-    summary: "Mobile app for practicing quizzes with instant feedback.",
-    description: "QuickQuiz helps users take multiple-choice quizzes, view results, and track progress over time. It features a clean UI, offline functionality, and uses SQLite for local storage. The app includes various quiz categories, difficulty levels, and comprehensive performance analytics.",
-    techStack: ["Java", "Android Studio", "SQLite", "Material Design"],
+    summary: "Enables multi-database SQL Server query execution and management with a user-friendly Tkinter interface..",
+    description: "Developed a robust SQL Tool application for managing and querying SQL Server databases with a user-friendly interface. The tool facilitates seamless database connections, query execution across multiple databases, and result visualization, enhancing productivity for database administrators and developers.",
+    techStack: ["Python", "PyODBC", "Threading", "PIL"],
     features: [
-      "Multiple quiz categories",
-      "Offline functionality",
-      "Progress tracking",
-      "Instant feedback",
-      "Performance analytics"
+      "Database Connectivity",
+      "Multi-Database Queries",
+      "Interactive Explorer",
+      "Result Logging",
+      "Safety Checks"
     ],
     liveDemo: null, // Mobile app - no web demo
     githubRepo: "https://github.com/yourusername/quickquiz",
