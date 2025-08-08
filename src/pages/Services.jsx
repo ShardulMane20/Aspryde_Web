@@ -8,7 +8,7 @@ import { OrbitControls, Stars, Sphere } from '@react-three/drei';
 import './Services.css';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import ParticleBackground from '../components/ParticleBackground';
-import logo from '../assets/logo.png'; // adjust path as needed
+import logo2 from '../assets/logo2.png'; // adjust path as needed
 
 
 
@@ -385,7 +385,7 @@ const ServicesPage = () => {
               <div className="energy-orb" />
 
               <motion.img
-              src={logo}
+              src={logo2}
               alt="Aspryde Logo"
               className="tech-icon"
               animate={{
