@@ -8,7 +8,7 @@ import aerobotz4 from '../assets/aerobotz4.png';
 import aerobotz5 from '../assets/aerobotz5.png';
 import zanvar1 from '../assets/zanvar1.jpg';
 import zanvar2 from '../assets/zanvar2.jpg';
-// import zanvar3 from '../assets/zanvar3.png';
+import zanvar3 from '../assets/zanvar3.jpg';
 // import zanvar4 from '../assets/zanvar4.png';  
 // import { a } from 'framer-motion/client';
 
@@ -104,7 +104,7 @@ const projectData = [
         type: "mobile"
       },
       {
-        src: logo,
+        src: zanvar3,
         caption: "Results Screen",
         type: "results"
       },
