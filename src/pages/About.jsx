@@ -13,7 +13,7 @@ const About = () => {
     <div className="about-page">
       <header className="about-header">
         <div className="logo-container">
-          <img src={logo} alt="Aspryde Logo" className="about-logo" />
+          
           <div className="logo-glow"></div>
         </div>
         <h1>

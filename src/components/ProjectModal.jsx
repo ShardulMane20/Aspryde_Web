@@ -298,45 +298,6 @@ const ProjectModal = ({ project, onClose }) => {
               ))}
             </div>
           </div>
-
-          {/* Action Buttons */}
-          {/* <div className="modal-actions">
-            {project.liveDemo && (
-              <button className="action-btn primary" onClick={() => window.open(project.liveDemo, '_blank')}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M15 22V12H21L9 2L3 12H9V22H15Z" fill="currentColor"/>
-                </svg>
-                Live Demo
-              </button>
-            )}
-            
-            {project.githubRepo && (
-              <button className="action-btn secondary" onClick={() => window.open(project.githubRepo, '_blank')}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M9 19C-2 19 4.5 6.5 9 9L16 3L22 9L16 15C18.5 19.5 5 26 9 19Z" fill="currentColor"/>
-                </svg>
-                View Code
-              </button>
-            )}
-
-            {project.playStoreLink && (
-              <button className="action-btn tertiary" onClick={() => window.open(project.playStoreLink, '_blank')}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 16L8 12L4 8M12 16H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                Play Store
-              </button>
-            )}
-
-            {!project.liveDemo && !project.githubRepo && !project.playStoreLink && (
-              <button className="action-btn tertiary">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 16L8 12L4 8M12 16H20" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
-                More Details
-              </button>
-            )}
-          </div> */}
         </div>
       </div>
     </div>
