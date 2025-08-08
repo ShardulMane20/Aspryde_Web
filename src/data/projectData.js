@@ -1,5 +1,5 @@
 // src/data/projectData.js
-
+import aerobotz from '../assets/aerobotz1.png';
 import logo from '../assets/logo.png';
 // import irrigation from '../assets/irrigation.png';
 // import edutrack from '../assets/edutrack.png';
@@ -8,8 +8,8 @@ import logo from '../assets/logo.png';
 const projectData = [
   {
     id: 1,
-    title: "Smart Irrigation System",
-    image: logo, // Main display image for project cards
+    title: "Ground Control Station for Aerobotz Pvt. Ltd.",
+    image: aerobotz, // Main display image for project cards
     images: [
       {
         src: logo,
