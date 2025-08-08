@@ -1,9 +1,11 @@
 // src/data/projectData.js
-import aerobotz from '../assets/aerobotz1.png';
+import aerobotz from '../assets/aerobotz1.jpg';
 import logo from '../assets/logo.png';
-// import irrigation from '../assets/irrigation.png';
-// import edutrack from '../assets/edutrack.png';
-// import quizapp from '../assets/quizapp.png';
+import aerobotz2 from '../assets/aerobotz2.png';
+import aerobotz3 from '../assets/aerobotz3.png';
+import aerobotz4 from '../assets/aerobotz4.png';
+import aerobotz5 from '../assets/aerobotz5.png';
+import { a } from 'framer-motion/client';
 
 const projectData = [
   {
@@ -12,35 +14,35 @@ const projectData = [
     image: aerobotz, // Main display image for project cards
     images: [
       {
-        src: logo,
-        caption: "System Dashboard",
+        src: aerobotz2,
+        caption: "",
         type: "interface"
       },
       {
-        src: logo,
-        caption: "Mobile Control App",
+        src: aerobotz3,
+        caption: "",
         type: "mobile"
       },
       {
-        src: logo,
-        caption: "Hardware Setup",
+        src: aerobotz4,
+        caption: "",
         type: "hardware"
       },
       {
-        src: logo,
-        caption: "Data Analytics",
+        src: aerobotz5,
+        caption: "",
         type: "analytics"
       }
     ],
-    summary: "IoT-based system that monitors soil moisture and automates watering.",
-    description: "This project uses a moisture sensor connected to a microcontroller which communicates with a web interface. Farmers can monitor real-time data and reduce water wastage. The system includes automated scheduling, weather integration, and comprehensive analytics to optimize water usage and improve crop yields.",
-    techStack: ["React", "IoT", "Firebase", "NodeMCU", "Arduino"],
+    summary: "Developed a tailored Ground Control Station for seamless AeroBotz drone operations.",
+    description: "Built a dedicated Ground Control Station tailored for AeroBotz UAVs to support real-time telemetry monitoring, mission planning, and autonomous flight control. The system enables seamless UAV operations with live map tracking, waypoint-based navigation, and in-flight command execution. Designed with an intuitive interface to streamline mission workflows and improve drone deployment efficiency.",
+    techStack: ["C++", "Qt", "MAVLink", "Networking (UDP/TCP)", "Git"],
     features: [
-      "Real-time soil moisture monitoring",
-      "Automated irrigation scheduling",
-      "Weather API integration",
-      "Mobile-responsive dashboard",
-      "Historical data analytics"
+      "Live telemetry monitoring",
+      "Waypoint-based mission planning",
+      "Autonomous flight control",
+      "Map-based UAV tracking",
+      "Simple and responsive UI"
     ],
     liveDemo: "https://smart-irrigation-demo.com",
     githubRepo: "https://github.com/yourusername/smart-irrigation",
