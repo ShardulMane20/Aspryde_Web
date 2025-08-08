@@ -1,5 +1,6 @@
 // src/data/projectData.js
 import aerobotz from '../assets/aerobotz1.png';
+import FoodApp1 from '../assets/FoodApp1.png';
 import logo from '../assets/logo.png';
 // import irrigation from '../assets/irrigation.png';
 // import edutrack from '../assets/edutrack.png';
@@ -48,8 +49,8 @@ const projectData = [
   },
   {
     id: 2,
-    title: "EduTrack",
-    image: logo,
+    title: "Food Ordering App",
+    image: FoodApp1, // Main display image for project cards
     images: [
       {
         src: logo,
@@ -72,15 +73,15 @@ const projectData = [
         type: "mobile"
       }
     ],
-    summary: "Student performance monitoring web app for teachers and parents.",
-    description: "EduTrack provides intuitive dashboards for attendance, assignments, and progress analytics. It supports role-based access and real-time updates. The platform enables seamless communication between teachers, students, and parents while providing comprehensive insights into academic performance.",
-    techStack: ["React", "Firebase", "CSS", "Chart.js", "Material-UI"],
+    summary: "Online Food Ordering TO Minimize Manual Error & Provide Better Customer Experience.",
+    description: "A mobile application for a local restaurant, enabling customers to browse menus, place orders, and track deliveries. Built with Kotlin and Firebase for a robust and scalable solution.",
+    techStack: ["Kotlin", "Firebase", "XML", "Cloudinory"],
     features: [
       "Role-based access control",
-      "Real-time attendance tracking",
-      "Assignment management",
-      "Progress analytics",
-      "Parent-teacher communication"
+      "Push notifications for order updates",
+      "Menu browsing with categories",
+      "Admin Dashboard",
+      "Enquiry Form & Feedback"
     ],
     liveDemo: "https://edutrack-demo.com",
     githubRepo: "https://github.com/yourusername/edutrack",
