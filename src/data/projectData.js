@@ -25,6 +25,7 @@ import PG1 from '../assets/PG1.jpg';
 import PG2 from '../assets/PG2.jpg';
 import PG3 from '../assets/PG3.jpg';
 import PG4 from '../assets/PG4.jpg';
+import PG5 from '../assets/PG5.jpg';
 
 
 const projectData = [
@@ -184,7 +185,7 @@ const projectData = [
   {
     id: 4,
     title: "PG Bhosale Farms",
-    image: PG1,
+    image: PG5,
     images: [
       {
         src: PG2,
@@ -202,7 +203,7 @@ const projectData = [
         type: "interface"
       },
       {
-        src: logo,
+        src: PG1,
         caption: "Responsive Design",
         type: "mobile"
       }
