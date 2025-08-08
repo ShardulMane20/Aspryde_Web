@@ -195,8 +195,8 @@ const projectData = [
         type: "mobile"
       }
     ],
-    summary: "Modern, responsive portfolio website showcasing projects and skills.",
-    description: "A fully responsive portfolio website built with React and modern web technologies. Features smooth animations, dark/light mode toggle, and optimized performance. Showcases projects with interactive elements and provides easy contact methods for potential clients and employers.",
+    summary: "Responsive Farms website showcasing product and quality.",
+    description: "A fully responsive farms website built with PHP and web technologies. Features smooth animations and optimized performance. Showcases products with interactive elements and provides easy contact methods for potential clients and employers.",
     techStack: ["HTML", "CSS3", "JS", "SQL","PHP"],
     features: [
       "Responsive design",
