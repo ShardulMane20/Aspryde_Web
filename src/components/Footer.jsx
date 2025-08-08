@@ -67,15 +67,7 @@ const Footer = ({ darkMode }) => {
           </div>
 
 
-          <div className="footer-section">
-            <h4>Our Expertise</h4>
-            <ul>
-              <li>React & Node.js</li>
-              <li>Flutter & Kotlin</li>
-              <li>IoT & Arduino</li>
-              <li>UI/UX Design</li>
-            </ul>
-          </div>
+          
         </div>
       </div>
 

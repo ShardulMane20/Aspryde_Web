@@ -166,7 +166,7 @@ const Contact = () => {
                     <h4>Email Us</h4>
                     
                     <a href="mailto:contact@aspryde.tech" className="contact-link">
-                      contact@aspryde.tech
+                      aspryde.official@gmail.com
                     </a>
                     
                     <p>For general inquiries and partnerships</p>
@@ -188,30 +188,24 @@ const Contact = () => {
                   
                   <div className="contact-details">
                     <h4>Visit Us</h4>
-                    <p> India ,Maharashtra ,Pune Sangli</p>
-                    <button className="map-button">
-                      View on Map
-                      <FiMapPin className="map-icon" />
-                    </button>
+                    <p> India, Maharashtra, Pune, Sangli</p>
+                    
                   </div>
                 </div>
               </div>
 
               <div className="social-section">
-                <h4>Follow Us</h4>
+                <h2>Follow Us</h2>
                 <div className="social-links">
                   <a href="https://linkedin.com/company/aspryde" target="_blank" rel="noopener noreferrer" className="social-link linkedin">
                     <FaLinkedin />
-                    <span>Lin</span>
+                    <span></span>
                   </a>
                   <a href="https://twitter.com/aspryde" target="_blank" rel="noopener noreferrer" className="social-link twitter">
                     <FaTwitter />
-                    <span>X</span>
+                    <span></span>
                   </a>
-                  <a href="https://github.com/aspryde" target="_blank" rel="noopener noreferrer" className="social-link github">
-                    <FaGithub />
-                    <span>Git</span>
-                  </a>
+                
                 </div>
               </div>
             </div>

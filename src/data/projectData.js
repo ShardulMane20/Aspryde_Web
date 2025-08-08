@@ -1,5 +1,5 @@
 // src/data/projectData.js
-import aerobotz from '../assets/aerobotz1.png';
+
 import FoodApp1 from '../assets/FoodApp1.png';
 import aerobotz from '../assets/aerobotz1.jpg';
 import logo from '../assets/logo.png';
