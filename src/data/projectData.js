@@ -18,7 +18,9 @@ import aerobotz5 from '../assets/aerobotz5.png';
 import zanvar1 from '../assets/zanvar1.jpg';
 import zanvar2 from '../assets/zanvar2.jpg';
 import zanvar3 from '../assets/zanvar3.jpg';
-// import zanvar4 from '../assets/zanvar4.png';  
+import zanvar4 from '../assets/zanvar4.jpg';  
+import zanvar5 from '../assets/zanvar5.jpg';
+import zanvar6 from '../assets/zanvar6.jpg';
 import PG1 from '../assets/PG1.jpg';
 import PG2 from '../assets/PG2.jpg';
 import PG3 from '../assets/PG3.jpg';
@@ -148,14 +150,20 @@ const projectData = [
         type: "results"
       },
       {
-        src: logo,
+        src: zanvar4,
         caption: "Progress Tracking",
         type: "analytics"
       },
       {
-        src: logo,
+        src: zanvar5,
         caption: "Category Selection",
         type: "interface"
+      },
+
+      {
+        src: zanvar6,
+        caption: "Progress Tracking",
+        type: "analytics"
       }
     ],
     summary: "Enables multi-database SQL Server query execution and management with a user-friendly Tkinter interface..",
