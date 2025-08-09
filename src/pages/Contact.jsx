@@ -177,10 +177,10 @@ const Contact = () => {
                   
                   <div className="contact-details">
                     <h4>Call Us</h4>
-                    <a href="tel:+917028814645" className="contact-link">
+                    <a href="tel:+919307708830" className="contact-link">
                       +91 70288 14645
                     </a>
-                    <p>Mon-Fri, 9am-6pm IST</p>
+                    <p>Mon-Fri, 9am - 7pm IST</p>
                   </div>
                 </div>
 
@@ -188,7 +188,7 @@ const Contact = () => {
                   
                   <div className="contact-details">
                     <h4>Visit Us</h4>
-                    <p> India, Maharashtra, Pune, Sangli</p>
+                    <p>Pune, Maharashtra, India</p>
                     
                   </div>
                 </div>
