@@ -1,0 +1,146 @@
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+  backdrop-filter: blur(20px);
+  position: relative;
+  z-index: 1;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(99, 241, 191, 0.408);
+  box-shadow: var(--shadow-lg), var(--glow);
+}
+
+.project-image-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.overlay-text {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.project-info {
+  padding: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--white) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.project-summary {
+  font-size: 0.95rem;
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech-badge {
+  background: rgba(191, 99, 241, 0.2);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  border-radius: 15px;
+  color: #000000; /* Black in hexadecimal */
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+
+.tech-badge:hover {
+  background: rgba(120, 122, 244, 0.862);
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-card {
+    border-radius: 16px;
+  }
+
+  .project-image-container {
+    height: 180px;
+  }
+
+  .project-title {
+    font-size: 1.3rem;
+  }
+
+  .project-summary {
+    font-size: 0.9rem;
+  }
+
+  .tech-badge {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .project-card {
+    border-radius: 12px;
+  }
+
+  .project-image-container {
+    height: 160px;
+  }
+
+  .project-info {
+    padding: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .project-summary {
+    font-size: 0.85rem;
+  }
+}
