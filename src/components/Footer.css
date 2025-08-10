@@ -136,3 +136,24 @@
   color: #49ced8;           /* Brighter on hover */
   text-decoration: underline; /* Optional */
 }
+
+.phone-icon {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  color: white;
+  font-size: medium;
+
+}
+.linkedin-icon {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  color: white;
+  font-size: medium;
+}
+
+.email-icon {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  color: white;
+  font-size: large;
+}

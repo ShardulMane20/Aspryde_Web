@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Footer.css';
 import companyLogo from '../assets/logo.png'; // Update with your logo path
-
 const Footer = ({ darkMode }) => {
   return (
     <footer className={`galaxy-footer ${darkMode ? 'dark-matter' : 'light-energy'}`}>
