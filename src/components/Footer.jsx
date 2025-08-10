@@ -2,7 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import './Footer.css';
 import companyLogo from '../assets/logo.png'; // Update with your logo path
-
+import { FaPhone } from "react-icons/fa6";
+import { FaLinkedin } from "react-icons/fa";
+import { CgMail } from "react-icons/cg";
 const Footer = ({ darkMode }) => {
   return (
     <footer className={`galaxy-footer ${darkMode ? 'dark-matter' : 'light-energy'}`}>
@@ -50,19 +52,19 @@ const Footer = ({ darkMode }) => {
             
             {/* Email */}
             <p>
-              ✉️ <a href="mailto:aspryde.official@gmail.com">aspryde.official@gmail.com</a>
+              <CgMail className='email-icon' /> <a href="mailto:aspryde.official@gmail.com">aspryde.official@gmail.com</a>
             </p>
             
             {/* LinkedIn */}
             <p>
-              🔗 <a href="https://www.linkedin.com/company/aspryde" target="_blank" rel="noopener noreferrer">
+              <FaLinkedin className='linkedin-icon' /> <a href="https://www.linkedin.com/company/aspryde" target="_blank" rel="noopener noreferrer">
                 linkedin.com/company/aspryde
               </a>
             </p>
             
             {/* Phone */}
             <p>
-              📱 <a href="tel:+919307708830">+91 93077 08830</a>
+              <FaPhone className='phone-icon' /> <a href="tel:+919307708830">+91 93077 08830</a>
             </p>
           </div>
 

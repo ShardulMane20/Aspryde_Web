@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import heroVideo from "../assets/bg.mp4";
 import logo from "../assets/logo.png";
 import "./Home.css";
+import Services from "./Services";
 
 const Home = () => {
   return (
@@ -48,7 +49,9 @@ const Home = () => {
           </motion.button>
         </motion.div>
       </div>
+      <Services />
     </div>
+    
   );
 };
 
