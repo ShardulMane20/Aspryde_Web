@@ -17,10 +17,10 @@ import aerobotz2 from '../assets/aerobotz2.png';
 import aerobotz3 from '../assets/aerobotz3.png';
 import aerobotz4 from '../assets/aerobotz4.png';
 import aerobotz5 from '../assets/aerobotz5.png';
-import zanvar1 from '../assets/zanvar1.jpg';
-import zanvar2 from '../assets/zanvar2.jpg';
-import zanvar3 from '../assets/zanvar3.jpg';
-import zanvar4 from '../assets/zanvar4.jpg';  
+import zanvar1 from '../assets/zanvar1.png';
+import zanvar2 from '../assets/zanvar2.png';
+import zanvar3 from '../assets/zanvar3.png';
+import zanvar4 from '../assets/zanvar4.png';  
 import zanvar5 from '../assets/zanvar5.jpg';
 import zanvar6 from '../assets/zanvar6.jpg';
 import PG1 from '../assets/PG1.jpg';
@@ -28,6 +28,12 @@ import PG2 from '../assets/PG2.jpg';
 import PG3 from '../assets/PG3.jpg';
 import PG4 from '../assets/PG4.jpg';
 import PG5 from '../assets/PG5.jpg';
+import mg from '../assets/mg1.png';
+import mg2 from '../assets/mg2.png';
+import mg3 from '../assets/mg3.png';
+import mg4 from '../assets/mg4.png';
+import mg5 from '../assets/mg5.png';
+import mg6 from '../assets/mg6.png';
 
 
 const projectData = [
@@ -219,6 +225,54 @@ const projectData = [
       "Smooth animations",
       "SEO optimized",
       "Fast loading times"
+    ],
+    liveDemo: "https://your-portfolio.com",
+    githubRepo: "https://github.com/yourusername/portfolio",
+    status: "in-progress"
+  },
+
+
+  {
+    id: 5,
+    title: "E-Commerce Website",
+    image: mg,
+    images: [
+      {
+        src: mg2,
+        caption: "Home Page",
+        type: "interface"
+      },
+      {
+        src: mg3,
+        caption: "Projects Section",
+        type: "showcase"
+      },
+      {
+        src: mg4,
+        caption: "Contact Form",
+        type: "interface"
+      },
+      {
+        src: mg5,
+        caption: "Responsive Design",
+        type: "mobile"
+      },
+
+      {
+        src: mg6,
+        caption: "Responsive Design",
+        type: "mobile"
+      }
+    ],
+    summary: "MG-Technology – Smart Online Store for Laptops & Accessories.",
+    description: "MG-Technology is a sponsored, enterprise-grade e-commerce platform developed in collaboration with an industry partner to modernize the retail experience for laptops and accessories. Designed with scalability, security, and performance at its core, the platform delivers a seamless shopping experience for customers while providing powerful management tools for administrators.",
+    techStack: ["HTML5", "CSS3 (Tailwind CSS)", "JavaScript (Alpine.js)", "MySQL","PHP"],
+    features: [
+      "Responsive design",
+      "Role-based access control",
+      "Real-time inventory tracking",
+      "SEO optimized",
+      "Scalable architecture"
     ],
     liveDemo: "https://your-portfolio.com",
     githubRepo: "https://github.com/yourusername/portfolio",
