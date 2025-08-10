@@ -413,21 +413,21 @@ const Portfolio = () => {
                 <div className="client-stat">
                   <FiUsers className="stat-icon" />
                   <div>
-                    <span className="stat-number">50+</span>
+                    <span className="stat-number">10+</span>
                     <span className="stat-label">Happy Clients</span>
                   </div>
                 </div>
                 <div className="client-stat">
                   <FiTrendingUp className="stat-icon" />
                   <div>
-                    <span className="stat-number">98%</span>
+                    <span className="stat-number">96%</span>
                     <span className="stat-label">Satisfaction Rate</span>
                   </div>
                 </div>
                 <div className="client-stat">
                   <FiStar className="stat-icon" />
                   <div>
-                    <span className="stat-number">4.9</span>
+                    <span className="stat-number">4.7</span>
                     <span className="stat-label">Average Rating</span>
                   </div>
                 </div>

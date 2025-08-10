@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Portfolio from "./pages/Portfolio";
 import ServicesPage from "./pages/Services";
 import Footer from "./components/Footer";
+import "./App.css";
 
 const App = () => {
   const [darkMode, setDarkMode] = useState(false);
