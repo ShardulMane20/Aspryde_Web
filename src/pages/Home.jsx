@@ -1,29 +1,68 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import heroVideo from "../assets/bg.mp4";
 import logo from "../assets/logo.png";
 import "./Home.css";
 import "./Services.css";
 
-import { Canvas, useLoader } from "@react-three/fiber";
-import { TextureLoader } from "three";
-import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars, Sphere } from "@react-three/drei";
+import * as THREE from "three";
 
 import ParticleBackground from "../components/ParticleBackground";
 import logo2 from "../assets/logo2.png";
 
 const Home = () => {
+  const [videoError, setVideoError] = useState(false);
+  const videoRef = useRef(null);
+
+  // Handle video loading and debugging
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      console.log("Video element:", video);
+      video.addEventListener('error', (e) => {
+        console.error("Video error:", e);
+        setVideoError(true);
+      });
+      video.addEventListener('loadeddata', () => {
+        console.log("Video loaded");
+        setVideoError(false);
+      });
+    }
+  }, []);
+
   return (
     <>
       <div className="home">
         <div className="hero">
-          <video className="hero-bg" autoPlay muted loop>
-            <source src={heroVideo} type="video/mp4" />
-          </video>
+          {!videoError ? (
+            <video
+              ref={videoRef}
+              className="hero-bg"
+              autoPlay
+              muted
+              loop
+              playsInline
+            >
+              <source src="/assets/bg.mp4?v=1" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          ) : (
+            <div
+              className="hero-bg-fallback"
+              style={{
+                background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d2d5a 100%)',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                zIndex: -1
+              }}
+            />
+          )}
 
-          {/* Gradient Overlay */}
-          <div className="overlay" />
+          <div className="overlay" style={{ opacity: 0.5 }} />
 
           <motion.div
             className="hero-content"
@@ -64,7 +103,6 @@ const Home = () => {
   );
 };
 
-// Professional Service Data
 const services = [
   {
     title: 'Mobile Application Development',
@@ -140,7 +178,6 @@ const services = [
   }
 ];
 
-// Professional 3D Earth Component
 const Earth = () => {
   const earthRef = useRef();
 
@@ -148,9 +185,9 @@ const Earth = () => {
     <Canvas camera={{ position: [0, 0, 4], fov: 45 }}>
       <ambientLight intensity={0.4} />
       <directionalLight position={[5, 5, 5]} intensity={0.8} />
-      <OrbitControls 
-        enableZoom={false} 
-        autoRotate 
+      <OrbitControls
+        enableZoom={false}
+        autoRotate
         autoRotateSpeed={2.5}
         enablePan={false}
         enableRotate={false}
@@ -170,44 +207,41 @@ const Earth = () => {
   );
 };
 
-// Professional Card Component
 const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isFlipped, setIsFlipped] = useState(false);
   const cardRef = useRef();
 
   return (
-    <motion.div 
+    <motion.div
       className="cosmic-card-container"
       ref={cardRef}
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        delay: index * 0.1, 
-        type: "spring", 
-        stiffness: 260, 
-        damping: 20 
+      transition={{
+        delay: index * 0.1,
+        type: "spring",
+        stiffness: 260,
+        damping: 20
       }}
       whileHover={{ y: -8 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       onClick={() => setIsFlipped(!isFlipped)}
     >
-      <motion.div 
-        className="cosmic-card" 
+      <motion.div
+        className="cosmic-card"
         style={{ '--card-color': color }}
-        animate={{ 
+        animate={{
           rotateY: isFlipped ? 180 : 0
         }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
       >
-        {/* Front Side */}
-        <motion.div 
+        <motion.div
           className="card-face front"
           animate={{ opacity: isFlipped ? 0 : 1 }}
           transition={{ duration: 0.2 }}
         >
-          {/* Subtle Background Particles */}
           <div className="star-field">
             {[...Array(8)].map((_, i) => (
               <motion.div
@@ -228,15 +262,14 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
             ))}
           </div>
 
-          {/* Main Content */}
-          <motion.div 
+          <motion.div
             className="card-content"
             animate={{
               y: isHovered ? -4 : 0
             }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            <motion.div 
+            <motion.div
               className="card-icon"
               animate={{
                 scale: isHovered ? 1.1 : 1
@@ -263,7 +296,6 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
             </ul>
           </motion.div>
 
-          {/* Technology Tags */}
           <div className="tech-orbs">
             {tech.map((t, i) => (
               <motion.span
@@ -277,8 +309,7 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
           </div>
         </motion.div>
 
-        {/* Back Side */}
-        <motion.div 
+        <motion.div
           className="card-face back"
           animate={{ opacity: isFlipped ? 1 : 0 }}
           transition={{ duration: 0.2 }}
@@ -302,19 +333,16 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
 
 const ServicesPage = () => {
   const [darkMode, setDarkMode] = useState(true);
-  const [audioEnabled, setAudioEnabled] = useState(false);
   const containerRef = useRef();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
   });
 
-  // Subtle Parallax Effects
   const yLogo = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const scaleTitle = useTransform(scrollYProgress, [0, 0.3], [1, 1.05]);
   const opacityTitle = useTransform(scrollYProgress, [0.4, 0.7], [1, 0.8]);
 
-  // Professional comet animation
   useEffect(() => {
     const comets = document.querySelectorAll('.comet');
     comets.forEach(comet => {
@@ -326,18 +354,13 @@ const ServicesPage = () => {
 
   return (
     <div className={`cosmic-container ${darkMode ? 'dark-matter' : 'light-energy'}`} ref={containerRef}>
-      {/* Professional Background */}
       <ParticleBackground darkMode={darkMode} />
       <div className="space-fabric" />
-      
-      {/* Subtle Navigation Indicators */}
-      
-      {/* Subtle Moving Elements */}
+
       <div className="comet" style={{ top: '20%', left: '-50px' }} />
       <div className="comet" style={{ top: '60%', left: '-80px' }} />
 
-      {/* Professional Logo Section */}
-      <motion.div 
+      <motion.div
         className="cosmic-logo"
         style={{ y: yLogo }}
       >
@@ -347,10 +370,9 @@ const ServicesPage = () => {
         <div className="cosmic-ring" />
       </motion.div>
 
-      {/* Main Content */}
       <div className="cosmic-content">
-        <motion.div 
-          className="cosmic-title" 
+        <motion.div
+          className="cosmic-title"
           style={{ scale: scaleTitle, opacity: opacityTitle }}
         >
           <h1>
@@ -370,8 +392,7 @@ const ServicesPage = () => {
           </motion.p>
         </motion.div>
 
-        {/* Professional Services Grid */}
-        <motion.div 
+        <motion.div
           className="cosmic-grid"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -382,8 +403,7 @@ const ServicesPage = () => {
           ))}
         </motion.div>
 
-        {/* Professional About Section */}
-        <motion.section 
+        <motion.section
           className="cosmic-about"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -392,19 +412,18 @@ const ServicesPage = () => {
         >
           <h2>Our Approach</h2>
           <p>
-            We combine <span className="text-highlight">strategic thinking</span> with 
-            <span className="text-highlight"> technical excellence</span> to deliver solutions 
-            that drive measurable business outcomes. Our methodology emphasizes user-centered design, 
-            scalable architecture, and agile development practices to ensure your project succeeds 
+            We combine <span className="text-highlight">strategic thinking</span> with
+            <span className="text-highlight"> technical excellence</span> to deliver solutions
+            that drive measurable business outcomes. Our methodology emphasizes user-centered design,
+            scalable architecture, and agile development practices to ensure your project succeeds
             in today's competitive digital landscape.
           </p>
           <p style={{ marginTop: '1.5rem' }}>
-            From initial consultation through deployment and beyond, we partner with you to 
+            From initial consultation through deployment and beyond, we partner with you to
             transform complex challenges into elegant, efficient solutions that grow with your business.
           </p>
 
-          {/* Subtle animated element */}
-          <motion.div 
+          <motion.div
             className="satellite"
             animate={{
               x: ['-50px', 'calc(100% + 50px)'],
@@ -420,8 +439,7 @@ const ServicesPage = () => {
           </motion.div>
         </motion.section>
 
-        {/* Professional Brand Divider */}
-        <motion.div 
+        <motion.div
           className="quantum-divider"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -451,7 +469,6 @@ const ServicesPage = () => {
           </div>
         </motion.div>
 
-        {/* Call to Action Section */}
         <motion.section
           className="cosmic-about"
           style={{ textAlign: 'center', marginTop: '4rem' }}
@@ -462,15 +479,15 @@ const ServicesPage = () => {
         >
           <h2>Ready to Get Started?</h2>
           <p>
-            Let's discuss how we can help transform your ideas into powerful digital solutions. 
-            <span className="text-highlight"> Contact us</span> to schedule a consultation and 
+            Let's discuss how we can help transform your ideas into powerful digital solutions.
+            <span className="text-highlight"> Contact us</span> to schedule a consultation and
             explore the possibilities for your next project.
           </p>
-          
+
           <motion.button
             className="explore-button"
-            style={{ 
-              marginTop: '2rem', 
+            style={{
+              marginTop: '2rem',
               padding: '1rem 2rem',
               fontSize: '1.1rem',
               background: 'linear-gradient(135deg, #3b82f6, #6366f1)',

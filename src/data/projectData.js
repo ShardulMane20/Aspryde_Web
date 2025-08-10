@@ -287,7 +287,7 @@ const projectData = [
 
   {
     id: 6,
-    title: "A modern real estate platform for showcasing properties",
+    title: "A Real Estate Platform",
     image: s1,
     images: [
       {

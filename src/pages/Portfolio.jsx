@@ -7,6 +7,8 @@ import ProjectCard from '../components/ProjectCard';
 import ProjectModal from '../components/ProjectModal';
 import projectData from '../data/projectData';
 import clientsData from '../data/clientsData'; // Import the new clients data
+import ParticleBackground from '../components/ParticleBackground';
+
 
 // Client Card Component with proper logo handling
 const ClientCard = ({ client, index }) => {
@@ -21,6 +23,7 @@ const ClientCard = ({ client, index }) => {
     setImageLoaded(true);
   };
 
+  
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
