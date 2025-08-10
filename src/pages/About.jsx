@@ -14,6 +14,7 @@ const About = () => {
       <header className="about-header">
         <div className="logo-container">
           
+          
           <div className="logo-glow"></div>
         </div>
         <h1>
