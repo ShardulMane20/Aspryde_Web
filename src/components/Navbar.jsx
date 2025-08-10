@@ -5,7 +5,7 @@ import './Navbar.css';
 const navItems = [
   { path: '/', name: 'Home' },
   { path: '/about', name: 'About' },
-  { path: '/services', name: 'Services' },
+ 
   { path: '/portfolio', name: 'Work' },
   { path: '/contact', name: 'Contact' },
 ];

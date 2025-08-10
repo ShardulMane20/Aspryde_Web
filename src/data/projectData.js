@@ -34,6 +34,10 @@ import mg3 from '../assets/mg3.png';
 import mg4 from '../assets/mg4.png';
 import mg5 from '../assets/mg5.png';
 import mg6 from '../assets/mg6.png';
+import s1 from '../assets/s1.png';
+import s2 from '../assets/s2.png';
+import s3 from '../assets/s3.png';
+import s4 from '../assets/s4.png';
 
 
 const projectData = [
@@ -277,6 +281,49 @@ const projectData = [
     liveDemo: "https://your-portfolio.com",
     githubRepo: "https://github.com/yourusername/portfolio",
     status: "in-progress"
+  }
+  ,
+
+
+  {
+    id: 6,
+    title: "A modern real estate platform for showcasing properties",
+    image: s1,
+    images: [
+      {
+        src: s1,
+        caption: "Home Page",
+        type: "interface"
+      },
+      {
+        src: s2,
+        caption: "Projects Section",
+        type: "showcase"
+      },
+      {
+        src: s3,
+        caption: "Contact Form",
+        type: "interface"
+      },
+      {
+        src: s4,
+        caption: "Responsive Design",
+        type: "mobile"
+      },
+
+      
+    ],
+    summary: "An elegant real estate platform that turns property dreams into reality.",
+    description: "A modern real estate platform showcasing premium residential and commercial projects, enabling users to explore properties, view detailed project portfolios, and connect directly with the company. Designed for a seamless and engaging browsing experience with elegant visuals and smooth navigation.",
+    techStack: ["HTML5", "CSS3 (Tailwind CSS)", "JavaScript (Alpine.js)", "Reactjs","Node.js"],
+    features: [
+      "Responsive design",
+      "Role-based access control",
+      "Customer testimonials section",
+      "SEO optimized",
+      "Scalable architecture"
+    ],
+
   }
 ];
 
