@@ -1,0 +1,159 @@
+.galaxy-footer {
+  position: relative;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  overflow: hidden;
+  min-height: 250px; /* Reduced height for compactness */
+  background: linear-gradient(180deg, #0A0E17 0%, #1C2526 100%);
+}
+
+.galaxy-static {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.galaxy-star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 5px white;
+}
+
+.footer-content {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center; /* Changed to center for vertical alignment */
+  z-index: 2;
+  gap: 2rem;
+}
+
+.logo-container {
+  text-align: center;
+  flex: 0 0 150px; /* Fixed width for logo section */
+  display: flex;
+  align-items: center; /* Ensure logo is centered within its container */
+  height: 100%; /* Match the height of footer-sections */
+}
+
+.company-logo {
+  width: 100px; /* Reduced logo size */
+  height: 100px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(108, 99, 255, 0.5));
+}
+
+.footer-sections {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  gap: 1rem; /* Reduced gap */
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 150px; /* Reduced min-width */
+  padding: 0.8rem; /* Reduced padding */
+  background: rgba(10, 14, 23, 0.7);
+  border-radius: 8px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(108, 99, 255, 0.3);
+}
+
+.footer-section h4 {
+  color: #41bcc7;
+  margin-bottom: 0.5rem; /* Reduced margin */
+  font-size: 1rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section li, .footer-section p {
+  margin: 0.3rem 0; /* Reduced margin */
+  padding: 0.2rem 0; /* Reduced padding */
+  font-size: 0.9rem; /* Smaller font size */
+  border-bottom: 1px dashed rgba(108, 99, 255, 0.2);
+}
+
+.shooting-star {
+  position: absolute;
+  width: 2px;
+  height: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+  transform: rotate(45deg);
+  animation: shoot 3s infinite;
+}
+
+@keyframes shoot {
+  0% {
+    opacity: 1;
+    transform: translateX(0) rotate(45deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(200px) rotate(45deg);
+  }
+}
+
+.copyright-container {
+  margin-top: 1rem; /* Reduced margin */
+  text-align: center;
+  width: 100%;
+}
+
+.copyright {
+  font-size: 0.85rem; /* Smaller font size */
+  color: white;
+}
+
+.dark-matter {
+  background: linear-gradient(180deg, #0A0E17 0%, #1C2526 100%);
+}
+
+.light-energy {
+  background: linear-gradient(180deg, #1C2526 0%, #3B4A6B 100%);
+}
+
+
+.footer-section a {
+  color: #2eb2bb;           /* Light cyan (matches your brand) */
+  text-decoration: none;   /* Remove underline */
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+  color: #49ced8;           /* Brighter on hover */
+  text-decoration: underline; /* Optional */
+}
+
+.phone-icon {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  color: white;
+  font-size: medium;
+
+}
+.linkedin-icon {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  color: white;
+  font-size: medium;
+}
+
+.email-icon {
+  vertical-align: middle;
+  margin-right: 0.3rem;
+  color: white;
+  font-size: large;
+}
