@@ -10,6 +10,7 @@ import * as THREE from "three";
 
 import ParticleBackground from "../components/ParticleBackground";
 import logo2 from "../assets/logo2.png";
+import clientsData from "../data/clientsData";
 
 const Home = () => {
   const [videoError, setVideoError] = useState(false);
@@ -331,6 +332,42 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
   );
 };
 
+// Client Logo Component for marquee
+const ClientLogo = ({ client, index }) => {
+  const [imageError, setImageError] = useState(false);
+  const [imageLoaded, setImageLoaded] = useState(false);
+
+  const handleImageError = () => {
+    setImageError(true);
+  };
+
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
+  return (
+    <div className="marquee-item">
+      <div className="marquee-logo-container">
+        {!imageError ? (
+          <img
+            src={client.logo}
+            alt={client.logoAlt}
+            className={`marquee-logo-img ${imageLoaded ? 'loaded' : ''}`}
+            onError={handleImageError}
+            onLoad={handleImageLoad}
+            loading="lazy"
+          />
+        ) : (
+          <div className="marquee-logo-fallback">
+            {client.name.charAt(0)}
+          </div>
+        )}
+      </div>
+      <span className="marquee-name">{client.name}</span>
+    </div>
+  );
+};
+
 const ServicesPage = () => {
   const [darkMode, setDarkMode] = useState(true);
   const containerRef = useRef();
@@ -500,6 +537,14 @@ const ServicesPage = () => {
             Start Your Project
           </motion.button>
         </motion.section>
+
+        <div className="clients-marquee">
+          <div className="marquee-content">
+            {[...clientsData, ...clientsData].map((client, index) => (
+              <ClientLogo key={index} client={client} index={index} />
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
