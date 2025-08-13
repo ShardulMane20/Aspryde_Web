@@ -18,6 +18,7 @@
 .about-header {
   text-align: center;
   padding: 2.5rem 1rem;
+  padding-top: 5rem; ;
   position: relative;
   overflow: hidden;
 }
@@ -35,23 +36,6 @@
 
 .logo-container:hover .about-logo {
   transform: scale(1.05);
-}
-
-.logo-glow {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 120px;
-  height: 120px;
-  background: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
-  transform: translate(-50%, -50%);
-  animation: pulse 3s infinite ease-in-out;
-}
-
-@keyframes pulse {
-  0% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
-  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.2); }
-  100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
 }
 
 .gradient-text {
@@ -236,7 +220,6 @@
 }
 
 /* Tech Stack */
-/* Updated Tech Stack Section */
 .stack-section {
   position: relative;
   overflow: hidden;
@@ -409,44 +392,6 @@
   animation-play-state: paused;
 }
 
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-  .stack-container {
-    gap: 1rem;
-    padding: 1rem 0.5rem;
-  }
-  
-  .stack-category {
-    flex: 0 0 240px;
-    padding: 1.2rem;
-    border-radius: 12px;
-  }
-  
-  .stack-category h4 {
-    font-size: 1.1rem;
-  }
-  
-  .stack-category li {
-    font-size: 0.9rem;
-    padding-left: 1.5rem;
-    margin-bottom: 0.6rem;
-  }
-  
-  .stack-category li::before {
-    width: 10px;
-    height: 10px;
-  }
-  
-  .stack-nav {
-    margin-top: 1rem;
-  }
-  
-  .stack-dot {
-    width: 10px;
-    height: 10px;
-  }
-}
-
 /* Enhanced Vision Section */
 .vision-section {
   background: linear-gradient(135deg, #0d1117 0%, #1a2332 100%);
@@ -600,31 +545,6 @@
   transform-origin: left;
 }
 
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .vision-cards {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-  
-  .vision-card {
-    padding: 1.5rem;
-  }
-  
-  .vision-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.5rem;
-  }
-  
-  .vision-card h3 {
-    font-size: 1.3rem;
-  }
-  
-  .vision-card p {
-    font-size: 0.95rem;
-  }
-}
 /* Contact Section */
 .contact-grid {
   display: grid;
@@ -700,7 +620,7 @@
   }
 
   .about-header {
-    padding: 1.5rem 0.5rem;
+    padding: 5rem 0.5rem;
     background: linear-gradient(135deg, #0d1117 0%, #1e2a3c 100%);
     border-radius: 12px;
   }
@@ -786,19 +706,14 @@
   }
 
   .stack-container {
-    grid-template-columns: 1fr;
     gap: 1rem;
+    padding: 1rem 0.5rem;
   }
 
   .stack-category {
-    padding: 1rem;
-    border-radius: 8px;
-    background: #2a3b4f;
-    transition: all 0.3s ease;
-  }
-
-  .stack-category:hover {
-    transform: translateY(-3px);
+    flex: 0 0 240px;
+    padding: 1.2rem;
+    border-radius: 12px;
   }
 
   .stack-category h4 {
@@ -807,16 +722,31 @@
 
   .stack-category li {
     font-size: 0.9rem;
-    margin-bottom: 0.3rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .stack-category li::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .stack-nav {
+    margin-top: 1rem;
+  }
+
+  .stack-dot {
+    width: 10px;
+    height: 10px;
   }
 
   .vision-cards {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .vision-card {
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 8px;
     background: linear-gradient(145deg, #2a3b4f, #3e4f66);
   }
@@ -824,14 +754,15 @@
   .vision-icon {
     width: 45px;
     height: 45px;
+    font-size: 1.5rem;
   }
 
   .vision-card h3 {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
   .vision-card p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   .contact-grid {

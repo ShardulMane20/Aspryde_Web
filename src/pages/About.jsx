@@ -282,10 +282,11 @@ const About = () => {
   <div className="vision-icon vision-icon-1">🔭</div>
   <h3>Our Vision</h3>
   <p>
-    To be a <span className="vision-highlight">global tech partner</span> delivering 
-    <span className="vision-highlight"> smart, reliable solutions</span> that fuel 
-    tomorrow's innovation.
-  </p>
+  To be a <span className="vision-highlight">global tech partner</span> delivering{" "}
+  <span className="vision-highlight">smart, reliable solutions</span> that fuel 
+  tomorrow's innovation.
+ </p>
+
 </div>
 <div className="vision-card">
   <div className="vision-icon vision-icon-2">🚀</div>

@@ -1182,7 +1182,7 @@ body {
   
   @container (max-width: 400px) {
     .client-card {
-      padding: 1rem;
+      padding: 2rem;
     }
     
     .client-header {
