@@ -279,15 +279,26 @@ const About = () => {
           </div>
           <div className="vision-cards">
             <div className="vision-card">
-              <div className="vision-icon vision-icon-1"></div>
-              <h3>Our Vision</h3>
-              <p>To be a global tech partner delivering smart, reliable, and secure solutions that fuel tomorrow's innovation.</p>
-            </div>
-            <div className="vision-card">
-              <div className="vision-icon vision-icon-2"></div>
-              <h3>Our Mission</h3>
-              <p>Empower bold ideas through technology and make software development efficient, scalable, and impactful.</p>
-            </div>
+  <div className="vision-icon vision-icon-1">🔭</div>
+  <h3>Our Vision</h3>
+  <p>
+    To be a <span className="vision-highlight">global tech partner</span> delivering 
+    <span className="vision-highlight"> smart, reliable solutions</span> that fuel 
+    tomorrow's innovation.
+  </p>
+</div>
+<div className="vision-card">
+  <div className="vision-icon vision-icon-2">🚀</div>
+  <h3>Our Mission</h3>
+  <p>
+    Empower <span className="vision-highlight">bold ideas</span> through technology and 
+    make software development <span className="vision-highlight">efficient, scalable</span>, 
+    and <span className="vision-highlight">impactful</span>.
+  </p>
+</div>
+
+             
+
           </div>
         </section>
 
