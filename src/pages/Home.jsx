@@ -3,6 +3,10 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import logo from "../assets/logo.png";
 import "./Home.css";
 import "./Services.css";
+import Android from "../assets/Android.jpg";
+import WebDev from "../assets/webdev.jpg";
+import iot from "../assets/iot.jpg"
+
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars, Sphere } from "@react-three/drei";
@@ -107,7 +111,7 @@ const Home = () => {
 const services = [
   {
     title: 'Mobile Application Development',
-    icon: '📱',
+    icon: <img src={Android} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="Android" />,
     points: [
       'Native Android development with Java & Kotlin',
       'Cross-platform solutions using Flutter framework',
@@ -119,7 +123,7 @@ const services = [
   },
   {
     title: 'Web Development Solutions',
-    icon: '💻',
+    icon: <img src={WebDev} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="WebDev" />,
     points: [
       'Full-stack development using modern React.js ecosystem',
       'Scalable backend architecture with Node.js and Python',
@@ -131,7 +135,7 @@ const services = [
   },
   {
     title: 'IoT Solutions & Prototyping',
-    icon: '🔧',
+    icon: <img src={iot} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
     points: [
       'Custom IoT device development with Arduino & Raspberry Pi',
       'Sensor integration and real-time data processing',
