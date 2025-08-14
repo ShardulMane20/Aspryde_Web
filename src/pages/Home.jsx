@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
 import "./Home.css";
 import "./Services.css";
@@ -19,6 +20,7 @@ import clientsData from "../data/clientsData";
 const Home = () => {
   const [videoError, setVideoError] = useState(false);
   const videoRef = useRef(null);
+  const navigate = useNavigate();
 
   // Handle video loading and debugging
   useEffect(() => {
@@ -35,6 +37,10 @@ const Home = () => {
       });
     }
   }, []);
+
+  const handleGetStarted = () => {
+    navigate('/contact');
+  };
 
   return (
     <>
@@ -97,6 +103,7 @@ const Home = () => {
               className="cta-button"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
+              onClick={handleGetStarted}
             >
               Get Started
             </motion.button>
@@ -375,6 +382,7 @@ const ClientLogo = ({ client, index }) => {
 const ServicesPage = () => {
   const [darkMode, setDarkMode] = useState(true);
   const containerRef = useRef();
+  const navigate = useNavigate();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start start", "end end"]
@@ -383,6 +391,10 @@ const ServicesPage = () => {
   const yLogo = useTransform(scrollYProgress, [0, 1], [0, -100]);
   const scaleTitle = useTransform(scrollYProgress, [0, 0.3], [1, 1.05]);
   const opacityTitle = useTransform(scrollYProgress, [0.4, 0.7], [1, 0.8]);
+
+  const handleStartProject = () => {
+    navigate('/contact');
+  };
 
   useEffect(() => {
     const comets = document.querySelectorAll('.comet');
@@ -537,6 +549,7 @@ const ServicesPage = () => {
             }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
+            onClick={handleStartProject}
           >
             Start Your Project
           </motion.button>
