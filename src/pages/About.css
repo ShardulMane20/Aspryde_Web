@@ -104,7 +104,7 @@
 
 .section-header h2 {
   font-size: 1.8rem;
-  color: #00ff88;
+  color: #00ff88 !important;
 }
 
 .section-divider {
@@ -116,11 +116,14 @@
 }
 
 .animated-text {
-  font-size: 1rem;
-  line-height: 1.8;
-  text-align: center;
-  color: #a1b2c3;
+  font-size: 1.2rem !important; /* Increased from 1rem to 1.25rem with !important to override other styles */
+  line-height: 2.2;
+  text-align: justify;
+  color: #d6aae3;
   animation: fadeInUp 1s ease-out;
+  font-weight: 500; /* Added font weight for better readability */
+  max-width: 900px; /* Added max-width for better text flow */
+  margin: 0 auto; /* Center the text block */
 }
 
 /* Team Grid */
@@ -679,7 +682,7 @@
   }
 
   .animated-text {
-    font-size: 0.95rem;
+    font-size: 1.1rem !important; /* Increased from 0.95rem to 1.1rem for mobile */
     line-height: 1.7;
     padding: 0 0.5rem;
   }

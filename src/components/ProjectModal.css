@@ -1,4 +1,4 @@
-/* src/components/ProjectModal.css - Dark Cyberpunk Theme - Polished Version */
+/* src/components/ProjectModal.css - Dark Cyberpunk Theme - Mobile Fixed Version */
 
 /* Performance optimizations */
 * {
@@ -98,44 +98,86 @@
   color: #a1b2c3;
 }
 
-/* Close Button - Fixed and Enhanced */
+/* Close Button - Enhanced Cyberpunk Design with Cross */
 .modal-close {
   position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 0, 0, 0.15);
-  border: 2px solid rgba(255, 0, 0, 0.4);
-  color: #ff4757;
+  top: 24px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, rgba(13, 17, 23, 0.95), rgba(30, 42, 60, 0.95));
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  color: #e6edf3;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1001;
-  font-size: 18px;
-  font-weight: bold;
-  box-shadow: 0 4px 15px rgba(255, 0, 0, 0.2);
+  font-size: 20px;
+  font-weight: 300;
+  box-shadow: 
+    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 0 20px rgba(0, 255, 136, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  
+  /* Mobile touch fixes */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+/* Add the cross/X symbol */
+.modal-close::after {
+  content: '×';
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  color: currentColor;
 }
 
 .modal-close::before {
-  content: '✕';
-  font-size: 16px;
-  line-height: 1;
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 8px;
+  padding: 1px;
+  background: linear-gradient(45deg, rgba(0, 255, 136, 0.4), rgba(0, 240, 255, 0.2));
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: xor;
+}
+
+.modal-close svg {
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  stroke-width: 2.5;
 }
 
 .modal-close:hover {
-  background: rgba(255, 0, 0, 0.25);
-  border-color: rgba(255, 0, 0, 0.6);
-  color: #fff;
-  transform: rotate(90deg) scale(1.1);
-  box-shadow: 0 6px 25px rgba(255, 0, 0, 0.4);
+  background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(0, 240, 255, 0.1));
+  border-color: rgba(0, 255, 136, 0.8);
+  color: #00ff88;
+  transform: scale(1.05);
+  box-shadow: 
+    0 6px 25px rgba(0, 255, 136, 0.3),
+    0 0 30px rgba(0, 255, 136, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .modal-close:active {
-  transform: rotate(90deg) scale(0.95);
+  transform: scale(0.98);
+  box-shadow: 
+    0 2px 8px rgba(0, 255, 136, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Carousel Section */
@@ -257,19 +299,10 @@
   color: #00ff88;
   font-size: 18px;
   font-weight: bold;
-}
-
-.carousel-nav::before {
-  font-size: 16px;
-  line-height: 1;
-}
-
-.carousel-nav-prev::before {
-  content: '‹';
-}
-
-.carousel-nav-next::before {
-  content: '›';
+  
+  /* Mobile touch fixes */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .carousel-nav:disabled {
@@ -355,6 +388,10 @@
   -webkit-backface-visibility: hidden;
   background: #2a3b4f;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  
+  /* Mobile touch fixes */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
 .thumbnail-btn:disabled {
@@ -394,15 +431,6 @@
 
 .thumbnail-btn.active .thumbnail-overlay {
   opacity: 0;
-}
-
-/* Dot Indicators - Removed to fix the issue you mentioned */
-.carousel-indicators {
-  display: none; /* Hidden to prevent the current image circle issue */
-}
-
-.indicator-dot {
-  display: none; /* Completely hidden */
 }
 
 /* Modal Body */
@@ -530,71 +558,6 @@
   color: #0d1117;
 }
 
-/* Action Buttons */
-.modal-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  padding-top: 28px;
-  border-top: 2px solid rgba(0, 255, 136, 0.3);
-  margin-top: 8px;
-}
-
-.action-btn {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 14px 28px;
-  border-radius: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border: none;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.action-btn.primary {
-  background: linear-gradient(135deg, #00ff88, #00f0ff);
-  color: #0d1117;
-  border: 2px solid rgba(0, 255, 136, 0.4);
-}
-
-.action-btn.primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 12px 35px rgba(0, 255, 136, 0.5);
-  background: linear-gradient(135deg, #00f0ff, #00ff88);
-}
-
-.action-btn.secondary {
-  background: linear-gradient(135deg, #2a3b4f, #3e4f66);
-  color: #e6edf3;
-  border: 2px solid rgba(0, 255, 136, 0.4);
-}
-
-.action-btn.secondary:hover {
-  background: linear-gradient(135deg, #3e4f66, #4a5c7a);
-  color: #00ff88;
-  border-color: #00ff88;
-  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.3);
-  transform: translateY(-2px);
-}
-
-.action-btn.tertiary {
-  background: transparent;
-  color: #00ff88;
-  border: 2px solid #00ff88;
-}
-
-.action-btn.tertiary:hover {
-  background: rgba(0, 255, 136, 0.15);
-  color: #00f0ff;
-  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.3);
-  transform: translateY(-2px);
-}
-
 /* Animations */
 @keyframes overlayFadeIn {
   from { 
@@ -665,6 +628,25 @@
     height: 300px;
   }
 
+  /* Mobile Close Button */
+  .modal-close {
+    top: 16px;
+    right: 16px;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-size: 18px;
+  }
+
+  .modal-close::after {
+    font-size: 26px;
+  }
+
+  .modal-close svg {
+    width: 22px;
+    height: 22px;
+  }
+
   .carousel-nav {
     width: 45px;
     height: 45px;
@@ -691,14 +673,6 @@
   .features-grid {
     grid-template-columns: 1fr;
   }
-
-  .modal-actions {
-    flex-direction: column;
-  }
-
-  .action-btn {
-    justify-content: center;
-  }
 }
 
 @media (max-width: 480px) {
@@ -708,10 +682,20 @@
   }
 
   .modal-close {
-    top: 15px;
-    right: 15px;
-    width: 38px;
-    height: 38px;
+    top: 12px;
+    right: 12px;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+  }
+
+  .modal-close::after {
+    font-size: 24px;
+  }
+
+  .modal-close svg {
+    width: 20px;
+    height: 20px;
   }
 
   .carousel-wrapper {
@@ -740,10 +724,5 @@
   .tech-badge {
     font-size: 0.75rem;
     padding: 8px 14px;
-  }
-
-  .action-btn {
-    padding: 12px 20px;
-    font-size: 0.8rem;
   }
 }

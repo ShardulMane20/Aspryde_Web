@@ -195,12 +195,12 @@ body {
 }
 
 .stat-icon {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(2.2rem, 3vw, 1.5rem);
   color: var(--primary-light);
 }
 
 .stat-number {
-  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-size: clamp(2.2rem, 3vw, 1.5rem);
   font-weight: 700;
   color: var(--white);
 }
@@ -604,12 +604,12 @@ body {
 }
 
 .client-stat .stat-icon {
-  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-size: clamp(2.2rem, 3.5vw, 1.8rem);
   color: var(--primary-light);
 }
 
 .client-stat .stat-number {
-  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-size: clamp(2.2rem, 3.5vw, 1.8rem);
   font-weight: 700;
   color: var(--white);
 }

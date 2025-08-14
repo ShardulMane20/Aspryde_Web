@@ -31,9 +31,55 @@ const About = () => {
             <h2>Company Overview</h2>
             <div className="section-divider"></div>
           </div>
-          <p className="animated-text">
-            Aspryde is a software technology company focused on crafting smart, scalable, and impactful digital products. We specialize in AI-powered platforms, modern mobile apps, cloud-native solutions, and full-stack web development. Our mission is to empower startups and enterprises through tech innovation.
-          </p>
+         <p 
+  style={{ 
+    fontSize: '1.3rem',        // Adjust font size
+    lineHeight: '2.1',         // Spacing between lines
+    textAlign: 'justify',      // Clean edge alignment
+    color: '#e6edf3',          // Text color
+    maxWidth: '900px',         // Keep it from being too wide
+    margin: '0 auto',          // Center block
+    fontWeight: 400 
+  }}
+>
+  At <span 
+    className="text-highlight" 
+    style={{ 
+      fontWeight: '700', 
+      fontSize: '1.5em',
+      lineHeight: '1.5', 
+      color: '#9e5db2ff',
+      letterSpacing: '0.5px' 
+    }}
+  >
+    Aspryde
+  </span>, 
+  we bring together 
+  <span className="text-highlight"> strategic insight</span> and 
+  <span className="text-highlight"> technical expertise</span> to create solutions 
+  that make a real impact. We focus on understanding your vision, your audience, 
+  and the challenges you face, ensuring every project is built on a foundation 
+  of user-focused design, scalable systems, and adaptable development practices.
+</p>
+
+<p 
+  style={{ 
+    marginTop: '1.5rem', 
+    fontSize: '1.3rem', 
+    lineHeight: '1.9', 
+    textAlign: 'justify', 
+    color: '#e6edf3', 
+    maxWidth: '900px', 
+    margin: '1.5rem auto 0', 
+    fontWeight: 400,
+    letterSpacing: '0.5px' 
+  }}
+>
+  From the very first conversation to launch and beyond, we work as your partner 
+  transforming complex ideas into clear, effective solutions that evolve with 
+  your business and deliver lasting value.
+</p>
+
         </section>
 
        <section className="about-section">

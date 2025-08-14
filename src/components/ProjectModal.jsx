@@ -36,6 +36,23 @@ const ProjectModal = ({ project, onClose }) => {
     ];
   }, [project]);
 
+  // Enhanced close button handlers for mobile support
+  const handleClose = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onClose();
+  }, [onClose]);
+
+  const handleTouchStart = useCallback((e) => {
+    e.stopPropagation();
+  }, []);
+
+  const handleTouchEnd = useCallback((e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    onClose();
+  }, [onClose]);
+
   // Smooth transition handler
   const handleTransition = useCallback((newIndex) => {
     if (isTransitioning || newIndex === currentImageIndex) return;
@@ -158,8 +175,15 @@ const ProjectModal = ({ project, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="modal-close" onClick={onClose} aria-label="Close modal">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <button 
+          className="modal-close" 
+          onClick={handleClose}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+          aria-label="Close modal"
+          type="button"
+        >
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" style={{ pointerEvents: 'none' }}>
             <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
           </svg>
         </button>
@@ -245,21 +269,6 @@ const ProjectModal = ({ project, onClose }) => {
                   <img src={image.src} alt={`Thumbnail ${index + 1}`} loading="lazy" />
                   <div className="thumbnail-overlay"></div>
                 </button>
-              ))}
-            </div>
-          )}
-
-          {/* Dot Indicators */}
-          {projectImages.length > 1 && (
-            <div className="carousel-indicators">
-              {projectImages.map((_, index) => (
-                <button
-                  key={index}
-                  className={`indicator-dot ${index === currentImageIndex ? 'active' : ''}`}
-                  onClick={() => goToImage(index)}
-                  disabled={isTransitioning}
-                  aria-label={`Go to image ${index + 1}`}
-                />
               ))}
             </div>
           )}

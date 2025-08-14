@@ -203,7 +203,7 @@ const Earth = () => {
       <OrbitControls
         enableZoom={false}
         autoRotate
-        autoRotateSpeed={2.5}
+        autoRotateSpeed={1.0}
         enablePan={false}
         enableRotate={false}
       />

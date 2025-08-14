@@ -4,10 +4,10 @@ import './Navbar.css';
 
 const navItems = [
   { path: '/', name: 'Home' },
-  { path: '/about', name: 'About' },
+  { path: '/about', name: 'Our Story' },
  
-  { path: '/portfolio', name: 'Work' },
-  { path: '/contact', name: 'Contact' },
+  { path: '/portfolio', name: 'Our Creations' },
+  { path: '/contact', name: 'Get in Touch' },
 ];
 
 const Navbar = () => {
