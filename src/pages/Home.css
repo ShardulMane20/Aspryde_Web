@@ -71,21 +71,22 @@ html, body {
 }
 
 .cta-button {
-  margin-top: 30px;
-  padding: 12px 24px;
-  background-color: #3b82f6;
-  border: none;
-  border-radius: 8px;
-  color: white;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.3s ease;
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+    margin-top: 30px;
+    padding: 12px 24px;
+    background: #3b82f6 !important;
+    border: none !important;
+    outline: none !important; /* Remove focus outline */
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
 
 .cta-button:hover {
-  background-color: #2563eb;
+    background: #2563eb !important;
 }
 
 @media (max-width: 768px) {

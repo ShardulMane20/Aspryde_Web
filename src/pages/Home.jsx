@@ -5,8 +5,11 @@ import logo from "../assets/logo.png";
 import "./Home.css";
 import "./Services.css";
 import Android from "../assets/Android.jpg";
-import WebDev from "../assets/webdev.jpg";
-import iot from "../assets/iot.jpg"
+import WebDev from "../assets/webdev.png";
+import iot from "../assets/iot.png"
+import tech from "../assets/tech.jpg";
+import UI from "../assets/UI.png";
+import process from "../assets/process.png";
 
 
 import { Canvas } from "@react-three/fiber";
@@ -154,7 +157,7 @@ const services = [
   },
   {
     title: 'Technology Consulting',
-    icon: '💡',
+    icon: <img src={tech} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
     points: [
       'Strategic technology roadmap development',
       'Architecture review and optimization recommendations',
@@ -166,7 +169,7 @@ const services = [
   },
   {
     title: 'User Experience Design',
-    icon: '🎨',
+    icon: <img src={UI} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
     points: [
       'User research and persona development',
       'Interactive prototyping and user testing',
@@ -178,7 +181,7 @@ const services = [
   },
   {
     title: 'Process Automation',
-    icon: '⚙️',
+    icon: <img src={process} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
     points: [
       'Custom workflow automation solutions',
       'API integrations and data synchronization',
