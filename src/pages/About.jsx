@@ -402,7 +402,7 @@ const About = () => {
             <div className="contact-card">
               <FiPhone className="contact-icon" />
               <h4>Call Us</h4>
-              <a href="tel:+917028814645">+91 70288 14645</a>
+              <a href="tel:+917028814645">+91 93077 08830</a>
             </div>
             <div className="contact-card">
               <FiMapPin className="contact-icon" />
