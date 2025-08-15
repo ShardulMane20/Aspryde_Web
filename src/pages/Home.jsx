@@ -11,7 +11,6 @@ import tech from "../assets/tech.jpg";
 import UI from "../assets/UI.png";
 import process from "../assets/process.png";
 
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars, Sphere } from "@react-three/drei";
 import * as THREE from "three";
@@ -128,7 +127,6 @@ const services = [
       'Modern UI/UX implementation with Material Design principles',
     ],
     color: '#3b82f6',
-    backContent: "End-to-end mobile application development from concept to deployment, ensuring scalable and performant solutions for your business needs.",
     tech: ['Flutter', 'Kotlin', 'Firebase']
   },
   {
@@ -140,7 +138,6 @@ const services = [
       'Database design and API development with REST/GraphQL',
     ],
     color: '#6366f1',
-    backContent: "Comprehensive web development services delivering fast, responsive, and SEO-optimized websites that drive business growth.",
     tech: ['React', 'Node.js', 'PostgreSQL']
   },
   {
@@ -152,7 +149,6 @@ const services = [
       'Cloud connectivity and dashboard development',
     ],
     color: '#06b6d4',
-    backContent: "Transform your hardware concepts into working IoT prototypes with seamless cloud integration and real-time monitoring capabilities.",
     tech: ['Arduino', 'Raspberry Pi', 'AWS IoT']
   },
   {
@@ -164,7 +160,6 @@ const services = [
       'Team mentorship and technical training programs',
     ],
     color: '#f59e0b',
-    backContent: "Expert guidance to help your organization make informed technology decisions and build sustainable development practices.",
     tech: ['Strategy', 'Architecture', 'Mentorship']
   },
   {
@@ -176,7 +171,6 @@ const services = [
       'Design systems and component libraries',
     ],
     color: '#10b981',
-    backContent: "Data-driven design solutions that prioritize user needs while achieving business objectives through intuitive interfaces.",
     tech: ['Figma', 'Adobe Creative Suite', 'Principle']
   },
   {
@@ -185,10 +179,9 @@ const services = [
     points: [
       'Custom workflow automation solutions',
       'API integrations and data synchronization',
-      'Performance optimization and monitoring',
+ 'performance optimization and monitoring',
     ],
     color: '#f43f5e',
-    backContent: "Streamline your business operations with intelligent automation solutions that reduce manual work and increase efficiency.",
     tech: ['Python', 'Zapier', 'REST APIs']
   }
 ];
@@ -222,9 +215,8 @@ const Earth = () => {
   );
 };
 
-const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) => {
+const CosmicCard = ({ title, points, index, icon, color, tech }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isFlipped, setIsFlipped] = useState(false);
   const cardRef = useRef();
 
   return (
@@ -242,106 +234,74 @@ const CosmicCard = ({ title, points, index, icon, color, backContent, tech }) =>
       whileHover={{ y: -8 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => setIsFlipped(!isFlipped)}
     >
-      <motion.div
-        className="cosmic-card"
-        style={{ '--card-color': color }}
-        animate={{
-          rotateY: isFlipped ? 180 : 0
-        }}
-        transition={{ type: "spring", stiffness: 300, damping: 25 }}
-      >
-        <motion.div
-          className="card-face front"
-          animate={{ opacity: isFlipped ? 0 : 1 }}
-          transition={{ duration: 0.2 }}
-        >
-          <div className="star-field">
-            {[...Array(8)].map((_, i) => (
-              <motion.div
-                key={i}
-                className="star"
-                animate={{
-                  x: Math.random() * 300 - 150,
-                  y: Math.random() * 300 - 150,
-                  opacity: [0.2, 0.5, 0.2],
-                  scale: [0.8, 1.1, 0.8]
-                }}
-                transition={{
-                  duration: 4 + Math.random() * 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              />
-            ))}
-          </div>
-
-          <motion.div
-            className="card-content"
-            animate={{
-              y: isHovered ? -4 : 0
-            }}
-            transition={{ type: "spring", stiffness: 300 }}
-          >
+      <div className="cosmic-card" style={{ '--card-color': color }}>
+        <div className="star-field">
+          {[...Array(8)].map((_, i) => (
             <motion.div
-              className="card-icon"
+              key={i}
+              className="star"
               animate={{
-                scale: isHovered ? 1.1 : 1
+                x: Math.random() * 300 - 150,
+                y: Math.random() * 300 - 150,
+                opacity: [0.2, 0.5, 0.2],
+                scale: [0.8, 1.1, 0.8]
               }}
-              transition={{ type: "spring", stiffness: 400 }}
-            >
-              {icon}
-            </motion.div>
+              transition={{
+                duration: 4 + Math.random() * 4,
+                repeat: Infinity,
+                ease: "easeInOut"
+              }}
+            />
+          ))}
+        </div>
 
-            <h3>{title}</h3>
-
-            <ul>
-              {points.map((point, i) => (
-                <motion.li
-                  key={i}
-                  initial={{ x: -10, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ delay: 0.05 * i, type: "spring" }}
-                >
-                  <span className="bullet" style={{ backgroundColor: color }} />
-                  {point}
-                </motion.li>
-              ))}
-            </ul>
+        <motion.div
+          className="card-content"
+          animate={{
+            y: isHovered ? -4 : 0
+          }}
+          transition={{ type: "spring", stiffness: 300 }}
+        >
+          <motion.div
+            className="card-icon"
+            animate={{
+              scale: isHovered ? 1.1 : 1
+            }}
+            transition={{ type: "spring", stiffness: 400 }}
+          >
+            {icon}
           </motion.div>
 
-          <div className="tech-orbs">
-            {tech.map((t, i) => (
-              <motion.span
+          <h3>{title}</h3>
+
+          <ul>
+            {points.map((point, i) => (
+              <motion.li
                 key={i}
-                className="tech-orb"
-                whileHover={{ scale: 1.05 }}
+                initial={{ x: -10, opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                transition={{ delay: 0.05 * i, type: "spring" }}
               >
-                {t}
-              </motion.span>
+                <span className="bullet" style={{ backgroundColor: color }} />
+                {point}
+              </motion.li>
             ))}
-          </div>
+          </ul>
         </motion.div>
 
-        <motion.div
-          className="card-face back"
-          animate={{ opacity: isFlipped ? 1 : 0 }}
-          transition={{ duration: 0.2 }}
-          style={{ backgroundColor: color }}
-        >
-          <div className="back-content">
-            <p>{backContent}</p>
-            <motion.button
-              className="explore-button"
+        <div className="tech-orbs">
+          {tech.map((t, i) => (
+            <motion.span
+              key={i}
+              className="tech-orb"
               whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.98 }}
             >
-              Learn More
-            </motion.button>
-          </div>
-        </motion.div>
-      </motion.div>
+              {t}
+            </motion.span>
+          ))}
+        </div>
+      </div>
     </motion.div>
   );
 };
