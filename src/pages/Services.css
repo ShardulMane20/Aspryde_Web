@@ -177,14 +177,11 @@ body {
   width: 100%;
   height: 100%;
   transform-style: preserve-3d;
-  background: var(--glass-bg);
   border-radius: 16px;
   overflow: hidden;
-  
   box-shadow: 
     0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  backdrop-filter: blur(16px);
   transition: all 0.3s ease;
 }
 
@@ -493,7 +490,38 @@ body {
   font-weight: 600;
 }
 
+/* About Section Mobile View */
+@media (max-width: 768px) {
+  .cosmic-about {
+    text-align: center;
+    max-width: 100%;
+    margin: 0 0 3rem;
+    padding: 1.5rem 1rem;
+    background: none; /* Remove glass background for mobile */
+    border: none; /* Remove border for cleaner look */
+    backdrop-filter: none; /* Remove blur effect */
+    line-height: 1.6; /* Reduce line height for better spacing */
+    font-size: 1.1rem; /* Slightly smaller font for mobile */
+  }
 
+  .cosmic-about h2 {
+    font-size: 1.5rem; /* Smaller heading size */
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    letter-spacing: normal; /* Remove letter spacing for simplicity */
+  }
+
+  .cosmic-about p {
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem; /* Add slight margin for readability */
+  }
+
+  .text-highlight {
+    color: var(--primary-blue);
+    font-weight: 600;
+  }
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -528,7 +556,7 @@ body {
 
   .cosmic-about {
     padding: 2rem;
-    text-align: left;
+    text-align: center;
   }
 
   .cosmic-card-container {
