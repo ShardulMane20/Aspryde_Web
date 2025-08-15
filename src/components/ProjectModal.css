@@ -1,27 +1,18 @@
-/* src/components/ProjectModal.css - Dark Cyberpunk Theme - Mobile Fixed Version */
+/* Optimized ProjectModal.css - Reduced file size and improved performance */
 
-/* Performance optimizations */
-* {
-  box-sizing: border-box;
-}
-
+/* Core optimizations */
 .modal-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
+  padding-top: 10%;
+  padding-bottom: 6%;
   background: rgba(13, 17, 23, 0.9);
   backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1000;
   animation: overlayFadeIn 0.3s ease-out;
-  will-change: opacity;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .modal-content {
@@ -31,23 +22,19 @@
   width: 95%;
   max-height: 90vh;
   overflow-y: auto;
-  overflow-x: hidden;
   position: relative;
   box-shadow: 
     0 25px 50px -12px rgba(0, 0, 0, 0.6),
     0 0 0 1px rgba(0, 255, 136, 0.3),
     0 0 30px rgba(0, 255, 136, 0.15);
   animation: modalSlideIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-overflow-scrolling: touch;
   border: 2px solid rgba(0, 255, 136, 0.4);
+  -webkit-overflow-scrolling: touch;
 }
 
-/* Header Section */
+/* Header */
 .modal-header {
-  padding: 32px 32px 16px 32px;
+  padding: 32px 32px 16px;
   border-bottom: 1px solid rgba(0, 255, 136, 0.3);
   background: linear-gradient(135deg, #0d1117 0%, #1a2332 100%);
   color: #e6edf3;
@@ -76,18 +63,6 @@
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradientShift 4s ease infinite;
-  text-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
-}
-
-@keyframes gradientShift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
 }
 
 .modal-summary {
@@ -98,7 +73,7 @@
   color: #a1b2c3;
 }
 
-/* Close Button - Enhanced Cyberpunk Design with Cross */
+/* Close Button */
 .modal-close {
   position: absolute;
   top: 24px;
@@ -115,51 +90,17 @@
   justify-content: center;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 1001;
-  font-size: 20px;
-  font-weight: 300;
-  box-shadow: 
-    0 4px 15px rgba(0, 0, 0, 0.3),
-    0 0 20px rgba(0, 255, 136, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  
-  /* Mobile touch fixes */
   -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
   touch-action: manipulation;
 }
 
-/* Add the cross/X symbol */
-.modal-close::after {
-  content: '×';
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 1;
-  color: currentColor;
-}
-
-.modal-close::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 8px;
-  padding: 1px;
-  background: linear-gradient(45deg, rgba(0, 255, 136, 0.4), rgba(0, 240, 255, 0.2));
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: xor;
-}
-
 .modal-close svg {
-  pointer-events: none;
   width: 20px;
   height: 20px;
   stroke-width: 2.5;
+  pointer-events: none;
 }
 
 .modal-close:hover {
@@ -167,17 +108,10 @@
   border-color: rgba(0, 255, 136, 0.8);
   color: #00ff88;
   transform: scale(1.05);
-  box-shadow: 
-    0 6px 25px rgba(0, 255, 136, 0.3),
-    0 0 30px rgba(0, 255, 136, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .modal-close:active {
   transform: scale(0.98);
-  box-shadow: 
-    0 2px 8px rgba(0, 255, 136, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
 /* Carousel Section */
@@ -190,9 +124,7 @@
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 
-    0 15px 40px rgba(0, 0, 0, 0.4),
-    0 0 0 1px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
   background: #0d1117;
   border: 2px solid rgba(0, 255, 136, 0.3);
 }
@@ -207,19 +139,13 @@
 .carousel-track {
   display: flex;
   height: 100%;
-  will-change: transform;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform-style: preserve-3d;
 }
 
 .carousel-slide {
   min-width: 100%;
   height: 100%;
   position: relative;
-  transform: translateZ(0);
-  -webkit-transform: translateZ(0);
 }
 
 .image-container {
@@ -234,9 +160,6 @@
   height: 100%;
   object-fit: contain;
   transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 .carousel-slide:hover .carousel-image {
@@ -245,10 +168,7 @@
 
 .image-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: linear-gradient(
     180deg,
     rgba(13, 17, 23, 0.3) 0%,
@@ -273,10 +193,9 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   border: 1px solid rgba(0, 255, 136, 0.5);
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
-/* Navigation Arrows - Enhanced */
+/* Navigation Arrows */
 .carousel-nav {
   position: absolute;
   top: 50%;
@@ -292,15 +211,7 @@
   justify-content: center;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   z-index: 10;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  will-change: transform;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   color: #00ff88;
-  font-size: 18px;
-  font-weight: bold;
-  
-  /* Mobile touch fixes */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
@@ -316,12 +227,7 @@
   background: rgba(0, 255, 136, 0.15);
   border-color: rgba(0, 255, 136, 0.6);
   transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
   color: #00f0ff;
-}
-
-.carousel-nav:not(:disabled):active {
-  transform: translateY(-50%) scale(1.05);
 }
 
 .carousel-nav-prev {
@@ -350,7 +256,6 @@
   font-size: 1.1rem;
   font-weight: 600;
   color: #e6edf3;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .caption-counter {
@@ -361,10 +266,9 @@
   padding: 6px 12px;
   border-radius: 15px;
   border: 1px solid rgba(0, 255, 136, 0.4);
-  box-shadow: 0 2px 8px rgba(0, 255, 136, 0.2);
 }
 
-/* Thumbnail Navigation - Enhanced */
+/* Thumbnail Navigation */
 .thumbnail-nav {
   display: flex;
   gap: 10px;
@@ -383,32 +287,20 @@
   position: relative;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   opacity: 0.6;
-  will-change: transform, opacity;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   background: #2a3b4f;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  
-  /* Mobile touch fixes */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-}
-
-.thumbnail-btn:disabled {
-  cursor: not-allowed;
 }
 
 .thumbnail-btn.active {
   opacity: 1;
   transform: scale(1.1);
-  box-shadow: 0 6px 20px rgba(0, 255, 136, 0.5);
   border: 3px solid #00ff88;
 }
 
 .thumbnail-btn:not(:disabled):hover {
   opacity: 0.9;
   transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.4);
   border-color: rgba(0, 255, 136, 0.6);
 }
 
@@ -425,17 +317,14 @@
   transition: opacity 0.3s ease;
 }
 
-.thumbnail-btn:hover .thumbnail-overlay {
-  opacity: 0;
-}
-
+.thumbnail-btn:hover .thumbnail-overlay,
 .thumbnail-btn.active .thumbnail-overlay {
   opacity: 0;
 }
 
 /* Modal Body */
 .modal-body {
-  padding: 0 32px 32px 32px;
+  padding: 0 32px 32px;
   background: #1e2a3c;
   color: #e6edf3;
 }
@@ -446,7 +335,6 @@
   color: #00ff88;
   margin: 28px 0 16px 0;
   position: relative;
-  text-shadow: 0 2px 8px rgba(0, 255, 136, 0.3);
 }
 
 .section-title::after {
@@ -492,13 +380,11 @@
   border-radius: 12px;
   border: 1px solid rgba(0, 255, 136, 0.25);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .feature-item:hover {
   background: linear-gradient(135deg, #3e4f66, #4a5c7a);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.2);
   border-color: rgba(0, 255, 136, 0.5);
 }
 
@@ -538,14 +424,12 @@
   gap: 8px;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 1px solid rgba(0, 255, 136, 0.25);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .tech-badge:hover {
   background: linear-gradient(135deg, #00ff88, #00f0ff);
   color: #0d1117;
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 255, 136, 0.4);
   border-color: rgba(0, 255, 136, 0.6);
 }
 
@@ -581,7 +465,18 @@
   }
 }
 
-/* Scrollbar Styling */
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
+
+/* Scrollbar */
 .modal-content::-webkit-scrollbar {
   width: 10px;
 }
@@ -628,29 +523,17 @@
     height: 300px;
   }
 
-  /* Mobile Close Button */
   .modal-close {
     top: 16px;
     right: 16px;
     width: 44px;
     height: 44px;
     border-radius: 10px;
-    font-size: 18px;
-  }
-
-  .modal-close::after {
-    font-size: 26px;
-  }
-
-  .modal-close svg {
-    width: 22px;
-    height: 22px;
   }
 
   .carousel-nav {
     width: 45px;
     height: 45px;
-    font-size: 16px;
   }
 
   .carousel-nav-prev {
@@ -687,15 +570,6 @@
     width: 40px;
     height: 40px;
     border-radius: 8px;
-  }
-
-  .modal-close::after {
-    font-size: 24px;
-  }
-
-  .modal-close svg {
-    width: 20px;
-    height: 20px;
   }
 
   .carousel-wrapper {
