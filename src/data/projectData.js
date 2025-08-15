@@ -154,28 +154,28 @@ const projectData = [
     images: [
       {
         src: zanvar2,
-        caption: "Quiz Interface",
+        caption: "",
         type: "mobile"
       },
       {
         src: zanvar3,
-        caption: "Results Screen",
+        caption: "",
         type: "results"
       },
       {
         src: zanvar4,
-        caption: "Progress Tracking",
+        caption: "",
         type: "analytics"
       },
       {
         src: zanvar5,
-        caption: "Category Selection",
+        caption: "",
         type: "interface"
       },
 
       {
         src: zanvar6,
-        caption: "Progress Tracking",
+        caption: "",
         type: "analytics"
       }
     ],
@@ -201,22 +201,22 @@ const projectData = [
     images: [
       {
         src: PG2,
-        caption: "Home Page",
+        caption: "",
         type: "interface"
       },
       {
         src: PG3,
-        caption: "Projects Section",
+        caption: "",
         type: "showcase"
       },
       {
         src: PG4,
-        caption: "Contact Form",
+        caption: "",
         type: "interface"
       },
       {
         src: PG1,
-        caption: "Responsive Design",
+        caption: "",
         type: "mobile"
       }
     ],
@@ -243,28 +243,28 @@ const projectData = [
     images: [
       {
         src: mg2,
-        caption: "Home Page",
+        caption: "",
         type: "interface"
       },
       {
         src: mg3,
-        caption: "Projects Section",
+        caption: "",
         type: "showcase"
       },
       {
         src: mg4,
-        caption: "Contact Form",
+        caption: "",
         type: "interface"
       },
       {
         src: mg5,
-        caption: "Responsive Design",
+        caption: "",
         type: "mobile"
       },
 
       {
         src: mg6,
-        caption: "Responsive Design",
+        caption: "",
         type: "mobile"
       }
     ],
@@ -292,22 +292,22 @@ const projectData = [
     images: [
       {
         src: s1,
-        caption: "Home Page",
+        caption: "",
         type: "interface"
       },
       {
         src: s2,
-        caption: "Projects Section",
+        caption: "",
         type: "showcase"
       },
       {
         src: s3,
-        caption: "Contact Form",
+        caption: "",
         type: "interface"
       },
       {
         src: s4,
-        caption: "Responsive Design",
+        caption: "n",
         type: "mobile"
       },
 
