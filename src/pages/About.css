@@ -706,6 +706,7 @@
     width: 100px; /* Updated to match general rule */
     height: 100px;
     margin-bottom: 0.6rem;
+    margin-top: 2rem;
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #00ff88;
@@ -716,12 +717,12 @@
     width: 100px; /* Updated to match team-avatar size */
     height: 100px;
     border-radius: 50%;
-    background-color: #ccc;
+    background-color: #3f3434;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 40px; /* Adjusted for larger placeholder */
-    color: white;
+    color: rgb(56, 43, 43);
     margin: 0 auto 0.6rem;
   }
 

@@ -27,60 +27,99 @@ const About = () => {
 
       <div className="content-wrapper">
         <section className="about-section">
-          <div className="section-header">
-            <h2>Company Overview</h2>
-            <div className="section-divider"></div>
-          </div>
-         <p 
-  style={{ 
-    fontSize: '1.3rem',        // Adjust font size
-    lineHeight: '2.1',         // Spacing between lines
-    textAlign: 'justify',      // Clean edge alignment
-    color: '#e6edf3',          // Text color
-    maxWidth: '900px',         // Keep it from being too wide
-    margin: '0 auto',          // Center block
-    fontWeight: 400 
-  }}
->
-  At <span 
-    className="text-highlight" 
+  <style>
+    {`
+      @media (max-width: 768px) {
+        .about-section {
+          padding: 1rem;
+          background: none !important; /* Explicitly remove any background */
+          border: none !important; /* Remove any potential border */
+          backdrop-filter: none !important; /* Remove any blur effect */
+        }
+
+        .about-section .section-header h2 {
+          font-size: 1.8rem;
+          font-weight: 600;
+          margin-bottom: 0.8rem;
+        }
+
+        .about-section .section-divider {
+          margin: 0.5rem auto;
+        }
+
+        .about-section p {
+          font-size: 1.0rem !important;
+          line-height: 2.5 !important;
+          text-align: center !important;
+          color: #e6edf3 !important;
+          max-width: 100% !important;
+          margin: 0.5rem 0 !important;
+          font-weight: 400 !important;
+          letter-spacing: normal !important;
+        }
+
+        .about-section .text-highlight {
+          font-size: 1rem !important;
+          line-height: 1.3 !important;
+          color: #9e5db2ff !important;
+          font-weight: 700 !important;
+          letter-spacing: normal !important;
+        }
+      }
+    `}
+  </style>
+  <div className="section-header">
+    <h2>Company Overview</h2>
+    <div className="section-divider"></div>
+  </div>
+  <p 
     style={{ 
-      fontWeight: '700', 
-      fontSize: '1.5em',
-      lineHeight: '1.5', 
-      color: '#9e5db2ff',
+      fontSize: '1.3rem',
+      lineHeight: '2.1',
+      textAlign: 'justify',
+      color: '#e6edf3',
+      maxWidth: '900px',
+      margin: '0 auto',
+      fontWeight: 400 
+    }}
+  >
+    At <span 
+      className="text-highlight" 
+      style={{ 
+        fontWeight: '700', 
+        fontSize: '1.5em',
+        lineHeight: '1.5', 
+        color: '#9e5db2ff',
+        letterSpacing: '0.5px' 
+      }}
+    >
+      Aspryde
+    </span>, 
+    we bring together 
+    <span className="text-highlight"> strategic insight</span> and 
+    <span className="text-highlight"> technical expertise</span> to create solutions 
+    that make a real impact. We focus on understanding your vision, your audience, 
+    and the challenges you face, ensuring every project is built on a foundation 
+    of user-focused design, scalable systems, and adaptable development practices.
+  </p>
+  <p 
+    style={{ 
+      marginTop: '1.5rem', 
+      fontSize: '1.3rem', 
+      lineHeight: '1.9', 
+      textAlign: 'justify', 
+      color: '#e6edf3', 
+      maxWidth: '900px', 
+      margin: '1.5rem auto 0', 
+      fontWeight: 400,
       letterSpacing: '0.5px' 
     }}
   >
-    Aspryde
-  </span>, 
-  we bring together 
-  <span className="text-highlight"> strategic insight</span> and 
-  <span className="text-highlight"> technical expertise</span> to create solutions 
-  that make a real impact. We focus on understanding your vision, your audience, 
-  and the challenges you face, ensuring every project is built on a foundation 
-  of user-focused design, scalable systems, and adaptable development practices.
-</p>
-
-<p 
-  style={{ 
-    marginTop: '1.5rem', 
-    fontSize: '1.3rem', 
-    lineHeight: '1.9', 
-    textAlign: 'justify', 
-    color: '#e6edf3', 
-    maxWidth: '900px', 
-    margin: '1.5rem auto 0', 
-    fontWeight: 400,
-    letterSpacing: '0.5px' 
-  }}
->
-  From the very first conversation to launch and beyond, we work as your partner 
-  transforming complex ideas into clear, effective solutions that evolve with 
-  your business and deliver lasting value.
-</p>
-
-        </section>
+    From the very first conversation to launch and beyond, we work as your partner 
+    transforming complex ideas into clear, effective solutions that evolve with 
+    your business and deliver lasting value.
+  </p>
+</section>
 
        <section className="about-section">
         <div className="section-header">
@@ -227,12 +266,12 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+        </section>
         <section className="about-section">
-  <div className="section-header">
-    <h2>Our Tech Stack</h2>
-    <div className="section-divider"></div>
-  </div>
+        <div className="section-header">
+          <h2>Our Tech Stack</h2>
+          <div className="section-divider"></div>
+        </div>
 
         <div className="stack-container">
           <div className="stack-category">
@@ -315,7 +354,7 @@ const About = () => {
             </ul>
           </div>
         </div>
-      </section>
+       </section>
 
 
         <section className="about-section vision-section">
@@ -325,24 +364,24 @@ const About = () => {
           </div>
           <div className="vision-cards">
             <div className="vision-card">
-  <div className="vision-icon vision-icon-1">🔭</div>
-  <h3>Our Vision</h3>
-  <p>
-  To be a <span className="vision-highlight">global tech partner</span> delivering{" "}
-  <span className="vision-highlight">smart, reliable solutions</span> that fuel 
-  tomorrow's innovation.
- </p>
+        <div className="vision-icon vision-icon-1">🔭</div>
+        <h3>Our Vision</h3>
+        <p>
+        To be a <span className="vision-highlight">global tech partner</span> delivering{" "}
+        <span className="vision-highlight">smart, reliable solutions</span> that fuel 
+        tomorrow's innovation.
+       </p>
 
-</div>
-<div className="vision-card">
-  <div className="vision-icon vision-icon-2">🚀</div>
-  <h3>Our Mission</h3>
-  <p>
-    Empower <span className="vision-highlight">bold ideas</span> through technology and 
-    make software development <span className="vision-highlight">efficient, scalable</span>, 
-    and <span className="vision-highlight">impactful</span>.
-  </p>
-</div>
+            </div>
+            <div className="vision-card">
+              <div className="vision-icon vision-icon-2">🚀</div>
+              <h3>Our Mission</h3>
+              <p>
+                Empower <span className="vision-highlight">bold ideas</span> through technology and 
+                make software development <span className="vision-highlight">efficient, scalable</span>, 
+                and <span className="vision-highlight">impactful</span>.
+              </p>
+            </div>
 
              
 
