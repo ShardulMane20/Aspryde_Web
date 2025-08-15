@@ -28,16 +28,6 @@
   display: inline-block;
 }
 
-.about-logo {
-  width: 100px;
-  height: auto;
-  transition: transform 0.3s ease;
-}
-
-.logo-container:hover .about-logo {
-  transform: scale(1.05);
-}
-
 .gradient-text {
   font-size: 2rem;
   font-weight: 700;
@@ -115,15 +105,9 @@
   border-radius: 2px;
 }
 
-.animated-text {
-  font-size: 1.2rem !important; /* Increased from 1rem to 1.25rem with !important to override other styles */
-  line-height: 2.2;
-  text-align: justify;
-  color: #d6aae3;
-  animation: fadeInUp 1s ease-out;
-  font-weight: 500; /* Added font weight for better readability */
-  max-width: 900px; /* Added max-width for better text flow */
-  margin: 0 auto; /* Center the text block */
+.text-highlight {
+  color: #9e5db2ff;
+  font-weight: 700;
 }
 
 /* Team Grid */
@@ -140,7 +124,7 @@
 .team-card-inner {
   position: relative;
   width: 100%;
-  height: 280px; /* Increased from 260px to accommodate larger avatar */
+  height: 280px;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -171,8 +155,8 @@
 }
 
 .team-avatar {
-  width: 130px !important; /* Increased to 100px with !important as suggested */
-  height: 130px !important; /* Increased to 100px with !important as suggested */
+  width: 130px !important;
+  height: 130px !important;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 0.6rem;
@@ -184,23 +168,6 @@
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(0, 255, 136, 0.4);
 }
-
-.team-avatar-placeholder {
-  width: 100px; /* Updated to match team-avatar size */
-  height: 100px;
-  border-radius: 50%;
-  background-color: #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 40px; /* Adjusted font size for larger placeholder */
-  color: white;
-  margin: 0 auto 0.6rem;
-}
-
-.avatar-ceo { background: linear-gradient(45deg, #00ff88, #00f0ff); }
-.avatar-coo { background: linear-gradient(45deg, #ff007a, #ff00cc); }
-.avatar-cto { background: linear-gradient(45deg, #007bff, #00ccff); }
 
 .team-card h3 {
   font-size: 1.2rem;
@@ -236,17 +203,6 @@
 }
 
 /* Tech Stack */
-.stack-section {
-  position: relative;
-  overflow: hidden;
-  padding: 2rem 0;
-}
-
-.stack-header {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
 .stack-container {
   display: flex;
   gap: 1.5rem;
@@ -371,43 +327,6 @@
   background: #ff007a;
 }
 
-/* Stack Navigation Dots */
-.stack-nav {
-  display: flex;
-  justify-content: center;
-  gap: 0.8rem;
-  margin-top: 1.5rem;
-}
-
-.stack-dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(161, 178, 195, 0.3);
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.stack-dot.active {
-  background: #00ff88;
-  transform: scale(1.2);
-  box-shadow: 0 0 8px rgba(0, 255, 136, 0.5);
-}
-
-/* Auto-scroll animation */
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(calc(-280px * 3)); }
-}
-
-.stack-container.auto-scroll {
-  animation: scroll 30s linear infinite;
-}
-
-.stack-container.auto-scroll:hover {
-  animation-play-state: paused;
-}
-
 /* Enhanced Vision Section */
 .vision-section {
   background: linear-gradient(135deg, #0d1117 0%, #1a2332 100%);
@@ -493,10 +412,7 @@
   transform: scale(1.1) rotate(10deg);
 }
 
-.vision-icon-1 { 
-  background: linear-gradient(135deg, #ff00e1, #25acb6);
-}
-
+.vision-icon-1,
 .vision-icon-2 { 
   background: linear-gradient(135deg, #ff00e1, #25acb6);
 }
@@ -527,13 +443,6 @@
   line-height: 1.8;
   margin-top: 1.2rem;
   position: relative;
-}
-
-/* Pulse animation for attention */
-@keyframes pulse-glow {
-  0% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0.4); }
-  70% { box-shadow: 0 0 0 15px rgba(0, 255, 136, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(0, 255, 136, 0); }
 }
 
 .vision-highlight {
@@ -681,19 +590,13 @@
     width: 60px;
   }
 
-  .animated-text {
-    font-size: 1.1rem !important; /* Increased from 0.95rem to 1.1rem for mobile */
-    line-height: 1.7;
-    padding: 0 0.5rem;
-  }
-
   .team-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
   .team-card-inner {
-    height: 240px; /* Increased from 220px to accommodate larger avatar */
+    height: 240px;
     border-radius: 8px;
   }
 
@@ -703,27 +606,10 @@
   }
 
   .team-avatar {
-    width: 100px; /* Updated to match general rule */
-    height: 100px;
+    width: 100px !important;
+    height: 100px !important;
     margin-bottom: 0.6rem;
     margin-top: 2rem;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #00ff88;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .team-avatar-placeholder {
-    width: 100px; /* Updated to match team-avatar size */
-    height: 100px;
-    border-radius: 50%;
-    background-color: #3f3434;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 40px; /* Adjusted for larger placeholder */
-    color: rgb(56, 43, 43);
-    margin: 0 auto 0.6rem;
   }
 
   .team-card h3 {
@@ -761,15 +647,6 @@
   }
 
   .stack-category li::before {
-    width: 10px;
-    height: 10px;
-  }
-
-  .stack-nav {
-    margin-top: 1rem;
-  }
-
-  .stack-dot {
     width: 10px;
     height: 10px;
   }
@@ -825,35 +702,4 @@
   .contact-card p {
     font-size: 0.9rem;
   }
-
-  /* Staggered animations for mobile */
-  .about-section,
-  .team-card,
-  .stack-category,
-  .vision-card,
-  .contact-card {
-    animation: slideUp 0.6s ease-out forwards;
-    animation-delay: calc(0.1s * var(--order));
-  }
-
-  .about-section:nth-child(1) { --order: 1; }
-  .about-section:nth-child(2) { --order: 2; }
-  .about-section:nth-child(3) { --order: 3; }
-  .team-card:nth-child(1) { --order: 1; }
-  .team-card:nth-child(2) { --order: 2; }
-  .team-card:nth-child(3) { --order: 3; }
-  .stack-category:nth-child(1) { --order: 1; }
-  .stack-category:nth-child(2) { --order: 2; }
-  .stack-category:nth-child(3) { --order: 3; }
-  .vision-card:nth-child(1) { --order: 1; }
-  .vision-card:nth-child(2) { --order: 2; }
-  .vision-card:nth-child(3) { --order: 3; }
-  .contact-card:nth-child(1) { --order: 1; }
-  .contact-card:nth-child(2) { --order: 2; }
-  .contact-card:nth-child(3) { --order: 3; }
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
 }
