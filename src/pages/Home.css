@@ -86,7 +86,7 @@ html, body {
   color: white;
   font-weight: 600;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: pointer !important;
   transition: background 0.3s ease;
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
 }
@@ -95,39 +95,11 @@ html, body {
   background: #2563eb !important;
 }
 
-/* CRITICAL FIX: Ensure services section has proper stacking context */
-.cosmic-container {
-  position: relative !important;
-  z-index: 10 !important;
-  background: var(--space-dark) !important;
-  /* Create new stacking context */
-  isolation: isolate !important;
-}
 
-/* Force the quantum divider to be visible */
-.quantum-divider {
-  position: relative !important;
-  z-index: 50 !important;
-  isolation: isolate !important;
-}
 
-.tech-icon {
-  position: relative !important;
-  z-index: 1000 !important;
-  /* Force visibility */
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
 
-/* Override any potential conflicts */
-.tech-icon-fallback {
-  position: relative !important;
-  z-index: 1000 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
-}
+
+
 
 @media (max-width: 768px) {
   .hero-content h1 {

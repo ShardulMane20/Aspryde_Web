@@ -26,11 +26,11 @@ const Home = () => {
     const video = videoRef.current;
     if (video) {
       console.log("Video element:", video);
-      video.addEventListener('error', (e) => {
+      video.addEventListener("error", (e) => {
         console.error("Video error:", e);
         setVideoError(true);
       });
-      video.addEventListener('loadeddata', () => {
+      video.addEventListener("loadeddata", () => {
         console.log("Video loaded");
         setVideoError(false);
       });
@@ -38,7 +38,7 @@ const Home = () => {
   }, []);
 
   const handleGetStarted = () => {
-    navigate('/contact');
+    navigate("/contact");
   };
 
   return (
@@ -61,18 +61,22 @@ const Home = () => {
             <div
               className="hero-bg-fallback"
               style={{
-                background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d2d5a 100%)',
-                position: 'absolute',
+                background:
+                  "linear-gradient(135deg, #0f0f23 0%, #1a1a3a 50%, #2d2d5a 100%)",
+                position: "absolute",
                 top: 0,
                 left: 0,
-                width: '100%',
-                height: '100%',
-                zIndex: -1
+                width: "100%",
+                height: "100%",
+                zIndex: -1,
               }}
             />
           )}
 
-          <div className="overlay" style={{ opacity: 0.5 }} />
+          <div
+            className="overlay"
+            style={{ opacity: 0.5, pointerEvents: "none" }} // Prevent overlay from blocking button
+          />
 
           <motion.div
             className="hero-content"
@@ -87,7 +91,9 @@ const Home = () => {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.3, duration: 1 }}
             >
-              Aspire Boldly,<br />Rise Proudly.
+              Aspire Boldly,
+              <br />
+              Rise Proudly.
             </motion.h1>
 
             <motion.p
@@ -103,6 +109,10 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
               onClick={handleGetStarted}
+              style={{
+                cursor: "pointer", // Fallback to ensure pointer cursor
+                zIndex: 10, // Ensure button is above navbar and overlay
+              }}
             >
               Get Started
             </motion.button>
@@ -116,71 +126,107 @@ const Home = () => {
 
 const services = [
   {
-    title: 'Mobile Application Development',
-    icon: <img src={Android} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="Android" />,
+    title: "Mobile Application Development",
+    icon: (
+      <img
+        src={Android}
+        style={{ width: "60px", height: "60px", borderRadius: "50px" }}
+        alt="Android"
+      />
+    ),
     points: [
-      'Native Android development with Java & Kotlin',
-      'Cross-platform solutions using Flutter framework',
-      'Modern UI/UX implementation with Material Design principles',
+      "Native Android development with Java & Kotlin",
+      "Cross-platform solutions using Flutter framework",
+      "Modern UI/UX implementation with Material Design principles",
     ],
-    color: '#3b82f6',
-    tech: ['Flutter', 'Kotlin', 'Firebase']
+    color: "#3b82f6",
+    tech: ["Flutter", "Kotlin", "Firebase"],
   },
   {
-    title: 'Web Development Solutions',
-    icon: <img src={WebDev} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="WebDev" />,
+    title: "Web Development Solutions",
+    icon: (
+      <img
+        src={WebDev}
+        style={{ width: "60px", height: "60px", borderRadius: "50px" }}
+        alt="WebDev"
+      />
+    ),
     points: [
-      'Full-stack development using modern React.js ecosystem',
-      'Scalable backend architecture with Node.js and Python',
-      'Database design and API development with REST/GraphQL',
+      "Full-stack development using modern React.js ecosystem",
+      "Scalable backend architecture with Node.js and Python",
+      "Database design and API development with REST/GraphQL",
     ],
-    color: '#6366f1',
-    tech: ['React', 'Node.js', 'PostgreSQL']
+    color: "#6366f1",
+    tech: ["React", "Node.js", "PostgreSQL"],
   },
   {
-    title: 'IoT Solutions & Prototyping',
-    icon: <img src={iot} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
+    title: "IoT Solutions & Prototyping",
+    icon: (
+      <img
+        src={iot}
+        style={{ width: "60px", height: "60px", borderRadius: "50px" }}
+        alt="IOT"
+      />
+    ),
     points: [
-      'Custom IoT device development with Arduino & Raspberry Pi',
-      'Sensor integration and real-time data processing',
-      'Cloud connectivity and dashboard development',
+      "Custom IoT device development with Arduino & Raspberry Pi",
+      "Sensor integration and real-time data processing",
+      "Cloud connectivity and dashboard development",
     ],
-    color: '#06b6d4',
-    tech: ['Arduino', 'Raspberry Pi', 'AWS IoT']
+    color: "#06b6d4",
+    tech: ["Arduino", "Raspberry Pi", "AWS IoT"],
   },
   {
-    title: 'Technology Consulting',
-    icon: <img src={tech} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="Tech" />,
+    title: "Technology Consulting",
+    icon: (
+      <img
+        src={tech}
+        style={{ width: "60px", height: "60px", borderRadius: "50px" }}
+        alt="Tech"
+      />
+    ),
     points: [
-      'Strategic technology roadmap development',
-      'Architecture review and optimization recommendations',
-      'Team mentorship and technical training programs',
+      "Strategic technology roadmap development",
+      "Architecture review and optimization recommendations",
+      "Team mentorship and technical training programs",
     ],
-    color: '#f59e0b',
-    tech: ['Strategy', 'Architecture', 'Mentorship']
+    color: "#f59e0b",
+    tech: ["Strategy", "Architecture", "Mentorship"],
   },
   {
-    title: 'User Experience Design',
-    icon: <img src={UI} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="UI" />,
+    title: "User Experience Design",
+    icon: (
+      <img
+        src={UI}
+        style={{ width: "60px", height: "60px", borderRadius: "50px" }}
+        alt="UI"
+      />
+    ),
     points: [
-      'User research and persona development',
-      'Interactive prototyping and user testing',
-      'Design systems and component libraries',
+      "User research and persona development",
+      "Interactive prototyping and user testing",
+      "Design systems and component libraries",
     ],
-    color: '#10b981',
-    tech: ['Figma', 'Adobe Creative Suite', 'Principle']
+    color: "#10b981",
+    tech: ["Figma", "Adobe Creative Suite", "Principle"],
   },
   {
-    title: 'Process Automation',
-    icon: <img src={process} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="Process" />,
+    title: "Process Automation",
+    icon: (
+      <img
+        src={process}
+        style={{ width: "60px", height: "60px", borderRadius: "50px" }}
+        alt="Process"
+      />
+    ),
     points: [
-      'Custom workflow automation solutions',
-      'API integrations and data synchronization',
-      'Performance optimization and monitoring',
+      "Custom workflow automation solutions",
+      "API integrations and data synchronization",
+      "Performance optimization and monitoring",
     ],
-    color: '#f43f5e',
-    tech: ['Python', 'Zapier', 'REST APIs']
-  }
+    color: "#f43f5e",
+    tech: ["Python", "Zapier", "REST APIs"],
+  },
 ];
 
 const Earth = () => {
@@ -199,11 +245,17 @@ const Earth = () => {
       />
       <Sphere ref={earthRef} args={[1.8, 64, 64]}>
         <meshPhongMaterial
-          map={new THREE.TextureLoader().load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg')}
-          bumpMap={new THREE.TextureLoader().load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_normal_2048.jpg')}
-          specularMap={new THREE.TextureLoader().load('https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_specular_2048.jpg')}
+          map={new THREE.TextureLoader().load(
+            "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_atmos_2048.jpg"
+          )}
+          bumpMap={new THREE.TextureLoader().load(
+            "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_normal_2048.jpg"
+          )}
+          specularMap={new THREE.TextureLoader().load(
+            "https://raw.githubusercontent.com/mrdoob/three.js/dev/examples/textures/planets/earth_specular_2048.jpg"
+          )}
           bumpScale={0.05}
-          specular={new THREE.Color('#4a9eff')}
+          specular={new THREE.Color("#4a9eff")}
           shininess={100}
         />
       </Sphere>
@@ -226,13 +278,13 @@ const CosmicCard = ({ title, points, index, icon, color, tech }) => {
         delay: index * 0.1,
         type: "spring",
         stiffness: 260,
-        damping: 20
+        damping: 20,
       }}
       whileHover={{ y: -8 }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="cosmic-card" style={{ '--card-color': color }}>
+      <div className="cosmic-card" style={{ "--card-color": color }}>
         <div className="star-field">
           {[...Array(8)].map((_, i) => (
             <motion.div
@@ -242,12 +294,12 @@ const CosmicCard = ({ title, points, index, icon, color, tech }) => {
                 x: Math.random() * 300 - 150,
                 y: Math.random() * 300 - 150,
                 opacity: [0.2, 0.5, 0.2],
-                scale: [0.8, 1.1, 0.8]
+                scale: [0.8, 1.1, 0.8],
               }}
               transition={{
                 duration: 4 + Math.random() * 4,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: "easeInOut",
               }}
             />
           ))}
@@ -256,14 +308,14 @@ const CosmicCard = ({ title, points, index, icon, color, tech }) => {
         <motion.div
           className="card-content"
           animate={{
-            y: isHovered ? -4 : 0
+            y: isHovered ? -4 : 0,
           }}
           transition={{ type: "spring", stiffness: 300 }}
         >
           <motion.div
             className="card-icon"
             animate={{
-              scale: isHovered ? 1.1 : 1
+              scale: isHovered ? 1.1 : 1,
             }}
             transition={{ type: "spring", stiffness: 400 }}
           >
@@ -322,15 +374,13 @@ const ClientLogo = ({ client, index }) => {
           <img
             src={client.logo}
             alt={client.logoAlt}
-            className={`marquee-logo-img ${imageLoaded ? 'loaded' : ''}`}
+            className={`marquee-logo-img ${imageLoaded ? "loaded" : ""}`}
             onError={handleImageError}
             onLoad={handleImageLoad}
             loading="lazy"
           />
         ) : (
-          <div className="marquee-logo-fallback">
-            {client.name.charAt(0)}
-          </div>
+          <div className="marquee-logo-fallback">{client.name.charAt(0)}</div>
         )}
       </div>
       <span className="marquee-name">{client.name}</span>
@@ -345,7 +395,7 @@ const ServicesPage = () => {
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"]
+    offset: ["start start", "end end"],
   });
 
   const yLogo = useTransform(scrollYProgress, [0, 1], [0, -100]);
@@ -353,12 +403,12 @@ const ServicesPage = () => {
   const opacityTitle = useTransform(scrollYProgress, [0.4, 0.7], [1, 0.8]);
 
   const handleStartProject = () => {
-    navigate('/contact');
+    navigate("/contact");
   };
 
   useEffect(() => {
-    const comets = document.querySelectorAll('.comet');
-    comets.forEach(comet => {
+    const comets = document.querySelectorAll(".comet");
+    comets.forEach((comet) => {
       const duration = 15 + Math.random() * 10;
       const delay = Math.random() * 20;
       comet.style.animation = `comet ${duration}s linear ${delay}s infinite`;
@@ -366,17 +416,17 @@ const ServicesPage = () => {
   }, []);
 
   return (
-    <div className={`cosmic-container ${darkMode ? 'dark-matter' : 'light-energy'}`} ref={containerRef}>
+    <div
+      className={`cosmic-container ${darkMode ? "dark-matter" : "light-energy"}`}
+      ref={containerRef}
+    >
       <ParticleBackground darkMode={darkMode} />
       <div className="space-fabric" />
 
-      <div className="comet" style={{ top: '20%', left: '-50px' }} />
-      <div className="comet" style={{ top: '60%', left: '-80px' }} />
+      <div className="comet" style={{ top: "20%", left: "-50px" }} />
+      <div className="comet" style={{ top: "60%", left: "-80px" }} />
 
-      <motion.div
-        className="cosmic-logo"
-        style={{ y: yLogo }}
-      >
+      <motion.div className="cosmic-logo" style={{ y: yLogo }}>
         <div className="earth-container">
           <Earth />
         </div>
@@ -393,15 +443,16 @@ const ServicesPage = () => {
           </h1>
           <motion.p
             animate={{
-              opacity: [0.8, 1, 0.8]
+              opacity: [0.8, 1, 0.8],
             }}
             transition={{
               duration: 3,
               repeat: Infinity,
-              ease: "easeInOut"
+              ease: "easeInOut",
             }}
           >
-            Delivering <span className="text-pulse">innovative solutions</span> through <span className="text-pulse">expert craftsmanship</span>
+            Delivering <span className="text-pulse">innovative solutions</span>{" "}
+            through <span className="text-pulse">expert craftsmanship</span>
           </motion.p>
         </motion.div>
 
@@ -425,27 +476,30 @@ const ServicesPage = () => {
         >
           <h2>Our Approach</h2>
           <p>
-            We combine <span className="text-highlight">strategic thinking</span> with
-            <span className="text-highlight"> technical excellence</span> to deliver solutions
-            that drive measurable business outcomes. Our methodology emphasizes user-centered design,
-            scalable architecture, and agile development practices to ensure your project succeeds
-            in today's competitive digital landscape.
+            We combine <span className="text-highlight">strategic thinking</span>{" "}
+            with
+            <span className="text-highlight"> technical excellence</span> to
+            deliver solutions that drive measurable business outcomes. Our
+            methodology emphasizes user-centered design, scalable architecture,
+            and agile development practices to ensure your project succeeds in
+            today's competitive digital landscape.
           </p>
-          <p style={{ marginTop: '1.5rem' }}>
-            From initial consultation through deployment and beyond, we partner with you to
-            transform complex challenges into elegant, efficient solutions that grow with your business.
+          <p style={{ marginTop: "1.5rem" }}>
+            From initial consultation through deployment and beyond, we partner
+            with you to transform complex challenges into elegant, efficient
+            solutions that grow with your business.
           </p>
 
           <motion.div
             className="satellite"
             animate={{
-              x: ['-50px', 'calc(100% + 50px)'],
-              rotate: [0, 180]
+              x: ["-50px", "calc(100% + 50px)"],
+              rotate: [0, 180],
             }}
             transition={{
               duration: 25,
               repeat: Infinity,
-              ease: "linear"
+              ease: "linear",
             }}
           >
             ✦
@@ -459,8 +513,6 @@ const ServicesPage = () => {
           viewport={{ margin: "-100px" }}
         >
           <div className="energy-orb" />
-          
-          {/* Updated image with error handling and fallback */}
           {!logo2Error ? (
             <motion.img
               src={logo2}
@@ -483,24 +535,23 @@ const ServicesPage = () => {
                 ease: "easeInOut",
               }}
               style={{
-                maxWidth: '100%',
-                maxHeight: '100%',
-                objectFit: 'contain'
+                maxWidth: "100%",
+                maxHeight: "100%",
+                objectFit: "contain",
               }}
             />
           ) : (
-            // Fallback content if image fails to load
             <motion.div
               className="tech-icon"
               style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                fontSize: '2rem',
-                fontWeight: 'bold',
-                color: 'var(--primary-blue)',
-                background: 'rgba(59, 130, 246, 0.1)',
-                border: '2px solid var(--primary-blue)',
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "2rem",
+                fontWeight: "bold",
+                color: "var(--primary-blue)",
+                background: "rgba(59, 130, 246, 0.1)",
+                border: "2px solid var(--primary-blue)",
               }}
               animate={{
                 y: ["-5px", "5px", "-3px", "3px", "0px"],
@@ -515,7 +566,7 @@ const ServicesPage = () => {
               A
             </motion.div>
           )}
-          
+
           <div className="rotating-particles">
             <div className="particle" />
             <div className="particle" />
@@ -526,7 +577,7 @@ const ServicesPage = () => {
 
         <motion.section
           className="cosmic-about"
-          style={{ textAlign: 'center', marginTop: '4rem' }}
+          style={{ textAlign: "center", marginTop: "4rem" }}
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ margin: "-50px" }}
@@ -534,20 +585,21 @@ const ServicesPage = () => {
         >
           <h2>Ready to Get Started?</h2>
           <p>
-            Let's discuss how we can help transform your ideas into powerful digital solutions.
-            <span className="text-highlight"> Contact us</span> to schedule a consultation and
-            explore the possibilities for your next project.
+            Let's discuss how we can help transform your ideas into powerful
+            digital solutions.
+            <span className="text-highlight"> Contact us</span> to schedule a
+            consultation and explore the possibilities for your next project.
           </p>
 
           <motion.button
             className="explore-button"
             style={{
-              marginTop: '2rem',
-              padding: '1rem 2rem',
-              fontSize: '1.1rem',
-              background: 'linear-gradient(135deg, #3b82f6, #6366f1)',
-              border: 'none',
-              borderRadius: '8px'
+              marginTop: "2rem",
+              padding: "1rem 2rem",
+              fontSize: "1.1rem",
+              background: "linear-gradient(135deg, #3b82f6, #6366f1)",
+              border: "none",
+              borderRadius: "8px",
             }}
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.98 }}
