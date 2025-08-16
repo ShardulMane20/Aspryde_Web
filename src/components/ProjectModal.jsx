@@ -288,7 +288,7 @@ const ProjectModal = ({ project, onClose }) => {
               <div className="features-grid">
                 {project.features.map((feature, index) => (
                   <div key={index} className="feature-item">
-                    <span className="feature-icon">✨</span>
+                    <span className="feature-icon"></span>
                     <span className="feature-text">{feature}</span>
                   </div>
                 ))}

@@ -8,6 +8,8 @@ html, body {
   height: 100vh;
   position: relative;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  /* Add isolation to prevent z-index conflicts */
+  isolation: isolate;
 }
 
 .hero {
@@ -15,6 +17,8 @@ html, body {
   height: 100%;
   width: 100%;
   z-index: 0;
+  /* Ensure hero doesn't interfere with other sections */
+  contain: layout style;
 }
 
 .hero-bg {
@@ -27,6 +31,8 @@ html, body {
   z-index: -2;
   will-change: transform, opacity;
   filter: brightness(0.5) contrast(1.1);
+  /* Limit the fixed background to only affect the hero section */
+  clip-path: inset(0 0 0 0);
 }
 
 .overlay {
@@ -87,6 +93,40 @@ html, body {
 
 .cta-button:hover {
   background: #2563eb !important;
+}
+
+/* CRITICAL FIX: Ensure services section has proper stacking context */
+.cosmic-container {
+  position: relative !important;
+  z-index: 10 !important;
+  background: var(--space-dark) !important;
+  /* Create new stacking context */
+  isolation: isolate !important;
+}
+
+/* Force the quantum divider to be visible */
+.quantum-divider {
+  position: relative !important;
+  z-index: 50 !important;
+  isolation: isolate !important;
+}
+
+.tech-icon {
+  position: relative !important;
+  z-index: 1000 !important;
+  /* Force visibility */
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+}
+
+/* Override any potential conflicts */
+.tech-icon-fallback {
+  position: relative !important;
+  z-index: 1000 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
 }
 
 @media (max-width: 768px) {

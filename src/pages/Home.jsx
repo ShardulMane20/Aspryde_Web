@@ -2,21 +2,19 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import logo from "../assets/logo.png";
+import logo2 from "../assets/logo2.png";
 import "./Home.css";
 import "./Services.css";
 import Android from "../assets/Android.jpg";
 import WebDev from "../assets/webdev.png";
-import iot from "../assets/iot.png"
+import iot from "../assets/iot.png";
 import tech from "../assets/tech.jpg";
 import UI from "../assets/UI.png";
 import process from "../assets/process.png";
-
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Stars, Sphere } from "@react-three/drei";
 import * as THREE from "three";
-
 import ParticleBackground from "../components/ParticleBackground";
-import logo2 from "../assets/logo2.png";
 import clientsData from "../data/clientsData";
 
 const Home = () => {
@@ -24,7 +22,6 @@ const Home = () => {
   const videoRef = useRef(null);
   const navigate = useNavigate();
 
-  // Handle video loading and debugging
   useEffect(() => {
     const video = videoRef.current;
     if (video) {
@@ -153,7 +150,7 @@ const services = [
   },
   {
     title: 'Technology Consulting',
-    icon: <img src={tech} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
+    icon: <img src={tech} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="Tech" />,
     points: [
       'Strategic technology roadmap development',
       'Architecture review and optimization recommendations',
@@ -164,7 +161,7 @@ const services = [
   },
   {
     title: 'User Experience Design',
-    icon: <img src={UI} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
+    icon: <img src={UI} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="UI" />,
     points: [
       'User research and persona development',
       'Interactive prototyping and user testing',
@@ -175,11 +172,11 @@ const services = [
   },
   {
     title: 'Process Automation',
-    icon: <img src={process} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="IOT" />,
+    icon: <img src={process} style={{ width: '60px', height: '60px', borderRadius: '50px' }} alt="Process" />,
     points: [
       'Custom workflow automation solutions',
       'API integrations and data synchronization',
- 'performance optimization and monitoring',
+      'Performance optimization and monitoring',
     ],
     color: '#f43f5e',
     tech: ['Python', 'Zapier', 'REST APIs']
@@ -306,7 +303,6 @@ const CosmicCard = ({ title, points, index, icon, color, tech }) => {
   );
 };
 
-// Client Logo Component for marquee
 const ClientLogo = ({ client, index }) => {
   const [imageError, setImageError] = useState(false);
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -344,6 +340,7 @@ const ClientLogo = ({ client, index }) => {
 
 const ServicesPage = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const [logo2Error, setLogo2Error] = useState(false);
   const containerRef = useRef();
   const navigate = useNavigate();
   const { scrollYProgress } = useScroll({
@@ -455,35 +452,77 @@ const ServicesPage = () => {
           </motion.div>
         </motion.section>
 
-        <motion.div
+        <motion.section
           className="quantum-divider"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ margin: "-100px" }}
         >
           <div className="energy-orb" />
-
-          <motion.img
-            src={logo2}
-            alt="Aspryde Logo"
-            className="tech-icon"
-            animate={{
-              y: ["-5px", "5px", "-3px", "3px", "0px"],
-              rotate: [0, 5, -5, 2, 0],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut",
-            }}
-          />
-
+          
+          {/* Updated image with error handling and fallback */}
+          {!logo2Error ? (
+            <motion.img
+              src={logo2}
+              alt="Aspryde Logo"
+              className="tech-icon"
+              onError={() => {
+                console.error("Logo2 failed to load:", logo2);
+                setLogo2Error(true);
+              }}
+              onLoad={() => {
+                console.log("Logo2 loaded successfully");
+              }}
+              animate={{
+                y: ["-5px", "5px", "-3px", "3px", "0px"],
+                rotate: [0, 5, -5, 2, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+              style={{
+                maxWidth: '100%',
+                maxHeight: '100%',
+                objectFit: 'contain'
+              }}
+            />
+          ) : (
+            // Fallback content if image fails to load
+            <motion.div
+              className="tech-icon"
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '2rem',
+                fontWeight: 'bold',
+                color: 'var(--primary-blue)',
+                background: 'rgba(59, 130, 246, 0.1)',
+                border: '2px solid var(--primary-blue)',
+              }}
+              animate={{
+                y: ["-5px", "5px", "-3px", "3px", "0px"],
+                rotate: [0, 5, -5, 2, 0],
+              }}
+              transition={{
+                duration: 8,
+                repeat: Infinity,
+                ease: "easeInOut",
+              }}
+            >
+              A
+            </motion.div>
+          )}
+          
           <div className="rotating-particles">
             <div className="particle" />
             <div className="particle" />
             <div className="particle" />
+            <div className="particle" />
           </div>
-        </motion.div>
+        </motion.section>
 
         <motion.section
           className="cosmic-about"
