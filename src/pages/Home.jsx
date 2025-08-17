@@ -339,17 +339,7 @@ const CosmicCard = ({ title, points, index, icon, color, tech }) => {
           </ul>
         </motion.div>
 
-        <div className="tech-orbs">
-          {tech.map((t, i) => (
-            <motion.span
-              key={i}
-              className="tech-orb"
-              whileHover={{ scale: 1.05 }}
-            >
-              {t}
-            </motion.span>
-          ))}
-        </div>
+        
       </div>
     </motion.div>
   );
