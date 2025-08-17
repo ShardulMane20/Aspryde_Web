@@ -656,8 +656,8 @@ body {
 
 .marquee-content {
   display: flex;
-  animation: marquee 45s linear infinite;
-  gap: clamp(2rem, 5vw, 4rem);
+  animation: marquee 25s linear infinite;
+  gap: clamp(1.5rem, 3vw, 4rem);
   align-items: center;
   will-change: transform;
 }
@@ -678,10 +678,10 @@ body {
 .marquee-item {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 2.5vw, 1.5rem);
+  gap: clamp(0.8rem, 2vw, 1.5rem);
   white-space: nowrap;
   flex-shrink: 0;
-  padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 2.5vw, 1.5rem);
+  padding: clamp(0.6rem, 1.5vw, 1rem) clamp(0.8rem, 2vw, 1.5rem);
   border-radius: clamp(12px, 3vw, 16px);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -722,8 +722,8 @@ body {
 }
 
 .marquee-logo-container {
-  width: clamp(40px, 10vw, 50px);
-  height: clamp(40px, 10vw, 50px);
+  width: clamp(32px, 8vw, 50px);
+  height: clamp(32px, 8vw, 50px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -772,7 +772,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-size: clamp(0.8rem, 2vw, 1.4rem);
   font-weight: 800;
   color: #00ff88;
   background: linear-gradient(135deg, rgba(0, 255, 136, 0.15), rgba(124, 58, 237, 0.15));
@@ -791,7 +791,7 @@ body {
 .marquee-name {
   color: #e2e8f0;
   font-weight: 700;
-  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-size: clamp(0.9rem, 2.2vw, 1.2rem);
   letter-spacing: -0.02em;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   background: linear-gradient(135deg, #e2e8f0, #94a3b8);
@@ -841,7 +841,29 @@ body {
   }
 }
 
-/* Responsive Media Queries */
+/* Mobile-specific marquee optimizations */
+@media (max-width: 768px) {
+  .marquee-content {
+    animation-duration: 20s; /* Faster on mobile */
+    gap: clamp(1rem, 2.5vw, 2rem); /* Smaller gaps */
+  }
+  
+  .marquee-item {
+    min-width: auto; /* Allow items to be smaller */
+    padding: clamp(0.5rem, 1.2vw, 0.8rem) clamp(0.6rem, 1.5vw, 1rem);
+  }
+  
+  .marquee-logo-container {
+    width: clamp(28px, 6vw, 40px);
+    height: clamp(28px, 6vw, 40px);
+  }
+  
+  .marquee-name {
+    font-size: clamp(0.8rem, 2vw, 1rem);
+  }
+}
+
+/* Very small screens */
 @media (max-width: 375px) {
   :root {
     --section-padding: clamp(1.5rem, 4vw, 2rem);
@@ -891,13 +913,25 @@ body {
     gap: 0.5rem;
   }
   
+  /* Ultra-fast marquee for very small screens */
   .marquee-content {
-    gap: 1.5rem;
-    animation-duration: 35s;
+    gap: 1rem; /* Even smaller gaps */
+    animation-duration: 15s; /* Very fast animation */
   }
   
   .marquee-item {
-    min-width: 140px;
+    min-width: 120px; /* Minimum width to ensure readability */
+    padding: 0.4rem 0.6rem;
+  }
+  
+  .marquee-logo-container {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+  }
+  
+  .marquee-name {
+    font-size: 0.75rem;
   }
 }
 
@@ -917,6 +951,11 @@ body {
   
   .client-rating {
     margin-left: auto;
+  }
+  
+  .marquee-content {
+    animation-duration: 30s; /* Medium speed for tablets */
+    gap: clamp(2rem, 4vw, 3rem);
   }
 }
 
@@ -950,6 +989,10 @@ body {
   .orb-1, .orb-2, .orb-3 {
     width: clamp(100px, 15vw, 200px);
     height: clamp(100px, 15vw, 200px);
+  }
+  
+  .marquee-content {
+    animation-duration: 18s; /* Fast for landscape mobile */
   }
 }
 

@@ -38,6 +38,10 @@ import s1 from '../assets/s1.png';
 import s2 from '../assets/s2.png';
 import s3 from '../assets/s3.png';
 import s4 from '../assets/s4.png';
+import per1 from '../assets/per1.jpg';
+import per2 from '../assets/per2.jpg';
+import per3 from '../assets/per3.jpg';
+import per4 from '../assets/per4.jpg';
 
 
 const projectData = [
@@ -199,24 +203,31 @@ const projectData = [
     title: "PG Bhosale Farms",
     image: PG5,
     images: [
+
+       {
+        src: PG5,
+        caption: "1",
+        type: "interface"
+      },
+
       {
         src: PG2,
-        caption: "",
+        caption: "2",
         type: "interface"
       },
       {
         src: PG3,
-        caption: "",
+        caption: "3",
         type: "showcase"
       },
       {
         src: PG4,
-        caption: "",
+        caption: "4",
         type: "interface"
       },
       {
         src: PG1,
-        caption: "",
+        caption: "5",
         type: "mobile"
       }
     ],
@@ -241,30 +252,38 @@ const projectData = [
     title: "E-Commerce Website",
     image: mg,
     images: [
+
+       {
+        src: mg,
+        caption: "1",
+        type: "interface"
+      },
+
+
       {
         src: mg2,
-        caption: "",
+        caption: "2",
         type: "interface"
       },
       {
         src: mg3,
-        caption: "",
+        caption: "3",
         type: "showcase"
       },
       {
         src: mg4,
-        caption: "",
+        caption: "4",
         type: "interface"
       },
       {
         src: mg5,
-        caption: "",
+        caption: "5",
         type: "mobile"
       },
 
       {
         src: mg6,
-        caption: "",
+        caption: "6",
         type: "mobile"
       }
     ],
@@ -292,22 +311,22 @@ const projectData = [
     images: [
       {
         src: s1,
-        caption: "",
+        caption: "1",
         type: "interface"
       },
       {
         src: s2,
-        caption: "",
+        caption: "2",
         type: "showcase"
       },
       {
         src: s3,
-        caption: "",
+        caption: "3",
         type: "interface"
       },
       {
         src: s4,
-        caption: "n",
+        caption: "4",
         type: "mobile"
       },
 
@@ -324,7 +343,49 @@ const projectData = [
       "Scalable architecture"
     ],
 
-  }
+  },
+
+  {
+    id: 6,
+    title: "Prescripto",
+    image: per1,
+    images: [
+      {
+        src: per1,
+        caption: "1",
+        type: "interface"
+      },
+      {
+        src: per2,
+        caption: "2",
+        type: "showcase"
+      },
+      {
+        src: per3,
+        caption: "3",
+        type: "interface"
+      },
+      {
+        src: per4,
+        caption: "4",
+        type: "mobile"
+      },
+    ],
+    summary: "A healthcare appointment platform that connects patients with trusted doctors.",
+    description: "Prescripto is an advanced healthcare management platform designed to simplify booking doctor appointments and managing health records. It enables users to explore doctors by specialty, view detailed doctor profiles with availability, and schedule appointments effortlessly. With a user-friendly interface and smooth navigation, the platform ensures a convenient and efficient healthcare experience.",
+    techStack: ["HTML5", "CSS3 (Tailwind CSS)", "JavaScript", "React.js", "Node.js"],
+    features: [
+      "Responsive design for all devices",
+      "Doctor profile with experience, specialty, and fees",
+      "Appointment booking with available time slots",
+      "Find doctors by specialty",
+      "User-friendly navigation and clean UI",
+      "About Us section with company vision",
+      "Seamless booking flow",
+      "Scalable architecture for healthcare services"
+    ],
+}
+
 ];
 
 export default projectData;
